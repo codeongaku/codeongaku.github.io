@@ -1,182 +1,723 @@
 /* General Styling */
+:root {
+    /* New Dark Theme Colors */
+    --primary-bg: #030420; /* Very Dark Navy/Black */
+    --secondary-bg: #090B38; /* Slightly lighter background for sections */
+    --primary-text: #E0E7FF; /* Light blue/white text */
+    --secondary-text: #BCC5E8; /* Subdued text/links */
+    --accent-color: #5C67C2; /* Deep violet/blue for highlights */
+    --header-link-color: #E0E7FF;
+    
+    --font-family: 'Poppins', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
 }
 
 body {
-    background: linear-gradient(135deg, #bae2ff 0%, #e3f2ff 100%);
-    color: #222;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
     line-height: 1.6;
 }
 
-/* Header */
-header {
-    background-color: #00052e;
-    color: rgb(203, 234, 255);
-    text-align: center;
-    padding: 2rem 0;
-    border-bottom: 3px solid #0077cc;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 5px;
-    margin-bottom: 0.5rem;
-    min-height: 3rem;
-}
-
-header p {
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    opacity: 0.9;
-    min-height: 1.8rem;
-}
-
-/* Typing cursor */
-.typing-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1.2rem;
-    background-color: rgb(203, 234, 255);
-    margin-left: 3px;
-    animation: blink 0.7s infinite;
-    vertical-align: middle;
-}
-
-@keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0; }
-}
-
-/* Navigation */
-nav {
-    background-color: #003d66;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-nav li {
-    margin: 0 1rem;
-}
-
-nav a {
-    color: #bae2ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    color: #fff;
-    background-color: rgba(255,255,255,0.1);
-}
-
-/* Main content */
+/* Base styles for h2/h3 and main container */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
+    max-width: 1100px; /* Increased width for new design */
+    margin: 3rem auto;
     padding: 0 1.5rem;
 }
 
 section {
-    background: white;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-margin-top: 80px; /* Offset for sticky nav */
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: var(--secondary-bg);
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    scroll-margin-top: 80px;
 }
 
 h2 {
-    color: #00052e;
-    border-bottom: 3px solid #0077cc;
+    color: var(--primary-text);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 h3 {
     margin-top: 1rem;
-    color: #003d66;
-    font-size: 1.3rem;
-}
-
-.content {
-    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 p, ul {
-    margin-bottom: 1rem;
-    color: #333;
+    color: var(--secondary-text);
 }
 
 ul {
-    padding-left: 1.5rem;
+    list-style-type: none; /* Removed default bullet points */
+    padding-left: 0;
 }
 
 li {
+    margin-bottom: 0.6rem;
+    font-weight: 300;
+}
+
+/* --- HEADER & NAVIGATION --- */
+
+header.dark-header {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin: 0;
+    min-height: auto;
+}
+
+.logo p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    min-height: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: var(--header-link-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Separator styling from mockup */
+.main-nav li:not(:last-child) a::after {
+    content: "|";
+    color: var(--secondary-text);
+    margin-left: 1.5rem;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Typing cursor */
+.typing-cursor {
+    background-color: var(--primary-text);
+}
+
+
+/* --- ABOUT ME SECTION --- */
+
+.about-hero {
+    background: none; /* Make this section transparent against the body */
+    box-shadow: none;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 0;
+}
+
+.about-hero h2 {
+    border-bottom: none;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+    line-height: 1.8;
+}
+
+.summary-line {
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
-footer {
-    background-color: #00052e;
-    color: rgb(203, 234, 255);
+.education-line {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-text);
+}
+
+.about-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    transition: color 0.3s;
+}
+
+.about-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-text);
+}
+
+.image-placeholder {
+    width: 35%;
+    min-width: 250px;
+    height: 300px;
+    background-color: #1a1c4d; /* Darker purple-blue */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+/* --- CURRENT SECTION (Roles, Projects, Skills) --- */
+
+.current-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.current-grid {
+    display: grid;
+    /* Create three columns, ensuring they fill space */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-top: 1.5rem;
+}
+
+.current-item {
+    background-color: #030420; /* Dark background for visual separation */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.current-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.current-item li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+/* --- SKILLS SECTION --- */
+
+.skills-section {
+    padding-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    /* 5 columns, matching the mockup layout */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px 30px;
+    padding: 1rem 0;
     text-align: center;
-    padding: 2rem 0;
+}
+
+.skill-item {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-weight: 300;
+}
+
+.skill-item [icon] {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    color: var(--accent-color); /* Highlight the icon placeholder */
+}
+
+/* --- EXPERIENCE SECTION: Timeline Styling --- */
+
+.experience-section {
+    padding-top: 2rem;
+}
+
+.experience-section h2 {
+    margin-bottom: 0;
+}
+
+.timeline-container {
     margin-top: 3rem;
 }
 
-footer a {
-    color: #0099ff;
-    text-decoration: none;
-    margin: 0 0.5rem;
+.timeline-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.timeline-container hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
 }
 
-/* Responsive Design */
+.timeline-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: relative;
+}
+
+/* Vertical Divider Line (Placeholder for visual timeline effect) */
+.timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Content Blocks */
+.entry-content {
+    width: 45%; /* Keeps space for the vertical line in the middle */
+    padding: 15px;
+    background-color: var(--primary-bg); /* Darker background for content boxes */
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.entry-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.entry-content h4 {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+.company {
+    font-style: italic;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.entry-content ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.entry-content li {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.3rem;
+}
+
+/* Date Blocks */
+.entry-date {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    padding: 15px;
+}
+
+/* Arrangement for non-reversed (content on right) */
+.left-date {
+    justify-content: flex-end; /* Push date to the right edge */
+    text-align: right;
+}
+
+/* Arrangement for reversed (content on left) */
+.timeline-entry.reversed .entry-date {
+    justify-content: flex-start; /* Push date to the left edge */
+    text-align: left;
+}
+
+/* --- COLLAPSIBLE BUTTON STYLING --- */
+
+.collapse-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.collapse-button {
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.collapse-button:hover {
+    background-color: #7b85e0; /* Slightly lighter on hover */
+}
+
+/* --- COLLAPSIBLE BUTTON STYLING --- */
+.past-leadership-content {
+    margin-top: 20px;
+    /* Removed padding here as the timeline entries handle padding */
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Used for the JavaScript toggle effect */
+    overflow: hidden; 
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.past-leadership-content.active {
+    max-height: 1000px; /* Increased max-height to ensure content fits */
+    transition: max-height 0.5s ease-in;
+}
+
+.past-leadership-content .collapsed-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    /* Mimics the blue bar on the mockup */
+    background-color: #0d0e3d; 
+}
+
+.past-volunteer-timeline {
+    /* Inherits from .timeline-container */
+    margin-top: 0;
+    padding: 1rem 0; 
+}
+
+/* Ensure the timeline inside the collapsed section looks correct */
+.past-leadership-timeline {
+    margin-top: 0;
+    padding: 1rem 0; /* Add internal padding to the content wrapper */
+}
+
+.past-leadership-timeline hr {
+    margin-bottom: 20px;
+}
+
+/* Date Blocks */
+.entry-date {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    padding: 15px;
+    /* Default direction for single dates */
+    flex-direction: column; 
+    justify-content: center;
+}
+
+/* Style for multi-row dates */
+.entry-date.multi-date {
+    /* Explicitly align items for stacking multiple dates */
+    align-items: flex-end; /* Right-align dates on the left side */
+}
+
+.timeline-entry.reversed .entry-date.multi-date {
+    align-items: flex-start; /* Left-align dates on the right side (reversed entry) */
+}
+
+.entry-date span {
+    display: block; /* Ensure each date span occupies its own line */
+    margin: 3px 0;
+}
+
+/* --- Responsive Timeline Adjustments --- */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* Collapse to 3 columns on small screens */
+    }
+    
+    .timeline-entry {
+        flex-direction: column; /* Stack content and date vertically */
+        padding: 0;
     }
 
-    nav ul {
+    .timeline-entry::before {
+        /* Move timeline line to the left edge */
+        left: 15px; 
+    }
+
+    .entry-content, .entry-date {
+        width: 100%;
+        padding: 10px 10px 10px 40px; /* Add padding for the line on the left */
+        text-align: left;
+    }
+    
+    .entry-date {
+        justify-content: flex-start;
+        font-size: 0.85rem;
+        padding-bottom: 0;
+    }
+
+    .entry-content {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .entry-date.multi-date {
+        align-items: flex-start; /* Ensure dates stack nicely and left-align on mobile */
+    }
+
+    .timeline-entry.reversed .entry-content {
+        order: 2;
+    }
+    .timeline-entry.reversed .entry-date {
+        order: 1;
+    }
+
+}
+
+/* --- FOOTER --- */
+
+footer {
+    background-color: var(--primary-bg);
+    /* ... (rest of the footer styles) ... */
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 1000px) {
+    .current-grid {
+        /* Collapse to two columns on medium screens */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        margin-top: 1rem;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .main-nav li:not(:last-child) a::after {
+        content: ""; /* Remove separator */
+        margin-left: 0;
+    }
+
+    .about-content {
         flex-direction: column;
         align-items: center;
     }
 
-    nav li {
-        margin: 0.5rem 0;
+    .about-text {
+        max-width: 100%;
+        order: 2; /* Text below image on small screens */
+    }
+    
+    .image-placeholder {
+        width: 80%;
+        max-width: 300px;
+        height: 250px;
+        margin-bottom: 2rem;
+        order: 1; /* Image above text on small screens */
     }
 
-    section {
-        padding: 1.5rem;
+    .current-grid {
+        /* Collapse to a single column on small screens */
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* --- PROJECTS SECTION --- */
+
+.projects-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.project-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.category-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Alignment for Academic header/divider */
+.academic-category .category-title.right-aligned,
+.academic-category .category-divider.right-aligned {
+    text-align: right;
+    margin-left: auto;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 30px;
+}
+
+/* Internship Grid: 2 Columns */
+.internship-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Academic Grid: 3 Columns */
+.academic-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+    background-color: #0d0e3d; /* Dark blue/purple background matching the mockup cards */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #1a1c4d; /* Darker placeholder color */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.project-card h4 {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.project-source {
+    font-style: italic;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-summary {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Collapsible Content - Reusing styles */
+#past-academic-content {
+    /* Ensures the same styling as the leadership/volunteer collapsed sections */
+    background-color: var(--secondary-bg);
+}
+
+/* --- Responsive Projects Grid Adjustments --- */
+@media (max-width: 1000px) {
+    .academic-grid {
+        /* Collapse 3-column grid to 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .internship-grid,
+    .academic-grid {
+        /* Collapse all grids to 1 column on small screens */
+        grid-template-columns: 1fr;
+    }
+    
+    .category-title {
+        text-align: center;
+    }
+
+    .academic-category .category-title.right-aligned,
+    .academic-category .category-divider.right-aligned {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

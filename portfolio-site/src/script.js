@@ -67,3 +67,46 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+
+// Toggle functionality for Past Experiences button
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Leadership Toggle ---
+    const toggleButtonLeadership = document.getElementById('togglePastLeadership');
+    const contentDivLeadership = document.getElementById('past-leadership-content');
+    
+    // --- Volunteer Toggle ---
+    const toggleButtonVolunteer = document.getElementById('togglePastVolunteer');
+    const contentDivVolunteer = document.getElementById('past-volunteer-content');
+
+// --- Academic Projects Toggle ---
+    const toggleButtonAcademic = document.getElementById('togglePastAcademic');
+    const contentDivAcademic = document.getElementById('past-academic-content');
+    
+    // Generic function to handle the toggle (redefined below for context)
+    const setupToggle = (button, content) => {
+        if (button && content) {
+            button.addEventListener('click', () => {
+                content.classList.toggle('active');
+                
+                // Update the button text dynamically
+                let originalText = button.textContent;
+                
+                if (button.id === 'togglePastLeadership') {
+                    originalText = 'Past Leadership Experiences';
+                } else if (button.id === 'togglePastVolunteer') {
+                    originalText = 'Past Volunteer/Mentorship Experiences';
+                } else if (button.id === 'togglePastAcademic') {
+                    originalText = 'Past Academic Projects';
+                }
+                
+                button.textContent = content.classList.contains('active') ? `Hide ${originalText}` : originalText;
+            });
+        }
+    };
+    
+    setupToggle(toggleButtonLeadership, contentDivLeadership);
+    setupToggle(toggleButtonVolunteer, contentDivVolunteer);
+    setupToggle(toggleButtonAcademic, contentDivAcademic); // NEW
+
+});
