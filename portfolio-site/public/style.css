@@ -45,7 +45,7 @@ h2 {
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 
@@ -61,7 +61,7 @@ p, ul {
 }
 
 ul {
-    list-style-type: none; /* Removed default bullet points */
+    list-style-type: none;
     padding-left: 0;
 }
 
@@ -143,7 +143,7 @@ header.dark-header {
 .about-hero {
     background: none; /* Make this section transparent against the body */
     box-shadow: none;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
     padding-bottom: 3rem;
     margin-bottom: 0;
 }
@@ -151,7 +151,7 @@ header.dark-header {
 .about-hero h2 {
     border-bottom: none;
     margin-bottom: 2rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -169,12 +169,12 @@ header.dark-header {
 }
 
 .summary-line {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
 .education-line {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -218,14 +218,13 @@ header.dark-header {
 
 .current-grid {
     display: grid;
-    /* Create three columns, ensuring they fill space */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    margin-top: 1.5rem;
+    gap: 24px;
+    margin-top: 1rem;
 }
 
 .current-item {
-    background-color: #030420; /* Dark background for visual separation */
+    background-color: #030420;
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -238,7 +237,7 @@ header.dark-header {
 }
 
 .current-item li {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
 }
 
@@ -256,7 +255,7 @@ header.dark-header {
 .skills-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .skill-category {
@@ -274,13 +273,13 @@ header.dark-header {
 
 .category-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-color, #7b8cde);
   margin-bottom: 0.75rem;
   font-weight: 600;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .skill-pills {
@@ -298,7 +297,7 @@ header.dark-header {
   border: 1px solid rgba(168, 178, 216, 0.18);
   background: rgba(168, 178, 216, 0.05);
   color: var(--secondary-text, #a8b2d8);
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 400;
   cursor: default;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
@@ -330,7 +329,7 @@ header.dark-header {
 }
 
 .timeline-container {
-    margin-top: 3rem;
+    margin-top: rem;
 }
 
 .timeline-title {
@@ -343,7 +342,7 @@ header.dark-header {
 .timeline-container hr {
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .timeline-entry {
@@ -412,6 +411,8 @@ header.dark-header {
     width: 45%;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 600;
     color: var(--secondary-text);
     font-size: 0.95rem;
@@ -422,12 +423,14 @@ header.dark-header {
 .left-date {
     justify-content: flex-end; /* Push date to the right edge */
     text-align: right;
+    align-self: center; 
 }
 
 /* Arrangement for reversed (content on left) */
 .timeline-entry.reversed .entry-date {
     justify-content: flex-start; /* Push date to the left edge */
     text-align: left;
+    align-self: center; 
 }
 
 /* --- COLLAPSIBLE BUTTON STYLING --- */
@@ -454,38 +457,9 @@ header.dark-header {
 }
 
 /* --- COLLAPSIBLE BUTTON STYLING --- */
-.past-employment-content {
-    margin-top: 20px;
-    /* Removed padding here as the timeline entries handle padding */
-    background-color: var(--secondary-bg);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    
-    /* Used for the JavaScript toggle effect */
-    overflow: hidden; 
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-}
-
-.past-employment-content.active {
-    max-height: 1000px; /* Increased max-height to ensure content fits */
-    transition: max-height 0.5s ease-in;
-}
-
-.past-employment-content .collapsed-title {
-    color: var(--primary-text);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-    /* Mimics the blue bar on the mockup */
-    background-color: #0d0e3d; 
-}
-
+.past-employment-content,
 .past-leadership-content {
     margin-top: 20px;
-    /* Removed padding here as the timeline entries handle padding */
     background-color: var(--secondary-bg);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -496,11 +470,13 @@ header.dark-header {
     transition: max-height 0.5s ease-out;
 }
 
+.past-employment-content.active,
 .past-leadership-content.active {
     max-height: 1000px; /* Increased max-height to ensure content fits */
     transition: max-height 0.5s ease-in;
 }
 
+.past-employment-content .collapsed-title,
 .past-leadership-content .collapsed-title {
     color: var(--primary-text);
     font-size: 1.5rem;
@@ -508,7 +484,6 @@ header.dark-header {
     text-align: center;
     padding: 1rem 0;
     margin-bottom: 1rem;
-    /* Mimics the blue bar on the mockup */
     background-color: #0d0e3d; 
 }
 
@@ -523,28 +498,14 @@ header.dark-header {
     margin-bottom: 20px;
 }
 
-/* Date Blocks */
-.entry-date {
-    width: 45%;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    color: var(--secondary-text);
-    font-size: 0.95rem;
-    padding: 15px;
-    /* Default direction for single dates */
-    flex-direction: column; 
-    justify-content: center;
-}
-
 /* Style for multi-row dates */
 .entry-date.multi-date {
     /* Explicitly align items for stacking multiple dates */
-    align-items: flex-end; /* Right-align dates on the left side */
+    align-items: center; /* Right-align dates on the left side */
 }
 
 .timeline-entry.reversed .entry-date.multi-date {
-    align-items: flex-start; /* Left-align dates on the right side (reversed entry) */
+    align-items: center; /* Left-align dates on the right side (reversed entry) */
 }
 
 .entry-date span {
@@ -602,7 +563,6 @@ header.dark-header {
 
 footer {
     background-color: var(--primary-bg);
-    /* ... (rest of the footer styles) ... */
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -809,5 +769,5 @@ footer {
 
 .contact-section {
     padding-top: 1rem;
-    padding-bottom: 1/5rem;
+    padding-bottom: 1.5rem;
 }
