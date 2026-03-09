@@ -71,6 +71,10 @@ window.addEventListener('scroll', () => {
 
 // Toggle functionality for Past Experiences button
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Employment Toggle ---
+    const toggleButtonEmployment = document.getElementById('togglePastEmployment');
+    const contentDivEmployment = document.getElementById('past-employment-content');
+
     // --- Leadership Toggle ---
     const toggleButtonLeadership = document.getElementById('togglePastLeadership');
     const contentDivLeadership = document.getElementById('past-leadership-content');
@@ -92,8 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update the button text dynamically
                 let originalText = button.textContent;
                 
-                if (button.id === 'togglePastLeadership') {
-                    originalText = 'Past Leadership Experiences';
+                if (button.id === 'togglePastEmployment') {
+                    originalText = 'Past Employment Experiences';
+                } else if (button.id === 'togglePastVolunteer') {
+                    originalText = 'Past Volunteer/Mentorship Experiences';
                 } else if (button.id === 'togglePastVolunteer') {
                     originalText = 'Past Volunteer/Mentorship Experiences';
                 } else if (button.id === 'togglePastAcademic') {
@@ -104,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
-    
+
+    setupToggle(toggleButtonEmployment, contentDivEmployment);
     setupToggle(toggleButtonLeadership, contentDivLeadership);
     setupToggle(toggleButtonVolunteer, contentDivVolunteer);
     setupToggle(toggleButtonAcademic, contentDivAcademic); // NEW

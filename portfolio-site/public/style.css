@@ -140,12 +140,11 @@ header.dark-header {
 
 
 /* --- ABOUT ME SECTION --- */
-
 .about-hero {
     background: none; /* Make this section transparent against the body */
     box-shadow: none;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     margin-bottom: 0;
 }
 
@@ -213,8 +212,8 @@ header.dark-header {
 /* --- CURRENT SECTION (Roles, Projects, Skills) --- */
 
 .current-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .current-grid {
@@ -246,35 +245,84 @@ header.dark-header {
 /* --- SKILLS SECTION --- */
 
 .skills-section {
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.skills-section h2 {
+  margin-bottom: 1.5rem;
 }
 
 .skills-grid {
-    display: grid;
-    /* 5 columns, matching the mockup layout */
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 15px 30px;
-    padding: 1rem 0;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.skill-item {
-    font-size: 0.9rem;
-    color: var(--secondary-text);
-    font-weight: 300;
+.skill-category {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: skillFadeIn 0.55s ease forwards;
+}
+.skill-category:nth-child(1) { animation-delay: 0.1s; }
+.skill-category:nth-child(2) { animation-delay: 0.25s; }
+.skill-category:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes skillFadeIn {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.skill-item [icon] {
-    display: block;
-    font-size: 1.8rem;
-    margin-bottom: 0.3rem;
-    color: var(--accent-color); /* Highlight the icon placeholder */
+.category-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color, #7b8cde);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 178, 216, 0.18);
+  background: rgba(168, 178, 216, 0.05);
+  color: var(--secondary-text, #a8b2d8);
+  font-size: 0.82rem;
+  font-weight: 400;
+  cursor: default;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(168, 178, 216, 0.12);
+  border-color: rgba(168, 178, 216, 0.45);
+  color: #dce3f7;
+  box-shadow: 0 0 12px rgba(168, 178, 216, 0.15);
+}
+
+.skill-icon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* --- EXPERIENCE SECTION: Timeline Styling --- */
 
 .experience-section {
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .experience-section h2 {
@@ -365,7 +413,7 @@ header.dark-header {
     display: flex;
     align-items: center;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--secondary-text);
     font-size: 0.95rem;
     padding: 15px;
 }
@@ -406,6 +454,35 @@ header.dark-header {
 }
 
 /* --- COLLAPSIBLE BUTTON STYLING --- */
+.past-employment-content {
+    margin-top: 20px;
+    /* Removed padding here as the timeline entries handle padding */
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Used for the JavaScript toggle effect */
+    overflow: hidden; 
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.past-employment-content.active {
+    max-height: 1000px; /* Increased max-height to ensure content fits */
+    transition: max-height 0.5s ease-in;
+}
+
+.past-employment-content .collapsed-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    /* Mimics the blue bar on the mockup */
+    background-color: #0d0e3d; 
+}
+
 .past-leadership-content {
     margin-top: 20px;
     /* Removed padding here as the timeline entries handle padding */
@@ -435,16 +512,11 @@ header.dark-header {
     background-color: #0d0e3d; 
 }
 
-.past-volunteer-timeline {
+/* Ensure the timeline inside the collapsed section looks correct */
+.past-experience-timeline {
     /* Inherits from .timeline-container */
     margin-top: 0;
     padding: 1rem 0; 
-}
-
-/* Ensure the timeline inside the collapsed section looks correct */
-.past-leadership-timeline {
-    margin-top: 0;
-    padding: 1rem 0; /* Add internal padding to the content wrapper */
 }
 
 .past-leadership-timeline hr {
@@ -457,7 +529,7 @@ header.dark-header {
     display: flex;
     align-items: center;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--secondary-text);
     font-size: 0.95rem;
     padding: 15px;
     /* Default direction for single dates */
@@ -590,8 +662,8 @@ footer {
 /* --- PROJECTS SECTION --- */
 
 .projects-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .project-category {
@@ -720,4 +792,22 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* --- FUN FACTS SECTION --- */
+
+.fun-facts-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fun-facts-content {
+    margin-bottom: 1rem;
+}
+
+/* --- CONTACT SECTION --- */
+
+.contact-section {
+    padding-top: 1rem;
+    padding-bottom: 1/5rem;
 }
