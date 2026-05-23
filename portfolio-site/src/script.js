@@ -83,11 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButtonVolunteer = document.getElementById('togglePastVolunteer');
     const contentDivVolunteer = document.getElementById('past-volunteer-content');
 
-// --- Academic Projects Toggle ---
+    // --- Academic Projects Toggle ---
     const toggleButtonAcademic = document.getElementById('togglePastAcademic');
     const contentDivAcademic = document.getElementById('past-academic-content');
     
-    // Generic function to handle the toggle (redefined below for context)
+    // Generic function to handle the toggle
     const setupToggle = (button, content) => {
         if (button && content) {
             button.addEventListener('click', () => {
@@ -117,3 +117,102 @@ document.addEventListener('DOMContentLoaded', () => {
     setupToggle(toggleButtonAcademic, contentDivAcademic); // NEW
 
 });
+
+// Section Builders
+
+// Following prev. format in past-index.html
+function buildProjectCard(p) {
+    const source  = p.source ? `<p class="project-source">${p.source}</p>` : '';
+    const actions = (p.links.github || p.links.casestudy)
+        ? `<div class="card-actions">
+            ${p.links.github    ? `<a href="${p.links.github}" target="_blank" class="card-btn btn-ghost">GitHub</a>` : ''}
+            ${p.links.casestudy ? `<a href="${p.links.casestudy}" class="card-btn btn-accent">View Case Study</a>` : ''}
+           </div>`
+        : '';
+    return `
+        <div class="project-card">
+            <div class="project-image-placeholder">Image Placeholder</div>
+            <h4>${p.title}</h4>
+            ${source}
+            <p class="project-summary">${p.summary}</p>
+            <p class="project-tech">${p.tech}</p>
+            ${actions}
+        </div>`;
+}
+ 
+// Following prev. format in past-index.html
+function buildTimelineEntry(e) {
+    const points   = e.points.map(pt => `<li>${pt}</li>`).join('');
+    const isRight  = e.side === 'right';  // "right" = date on left, content on right
+    return `
+        <div class="timeline-entry ${isRight ? '' : 'reversed'}">
+            ${isRight  ? `<div class="entry-date left-date">${e.date}</div>` : ''}
+            <div class="entry-content ${isRight ? 'right-content' : 'left-content'}">
+                <h4>${e.title}</h4>
+                <p class="company">${e.company}</p>
+                <ul>${points}</ul>
+            </div>
+            ${!isRight ? `<div class="entry-date right-date">${e.date}</div>` : ''}
+        </div>`;
+}
+ 
+function buildSkillPill(s) {
+    return `
+        <div class="skill-pill">
+            <img src="${s.icon}" class="skill-icon" alt="" />
+            <span>${s.name}</span>
+        </div>`;
+}
+ 
+// Append rendered HTML into a container; logs a warning if selector not found.
+function populateGrid(selector, items, builder) {
+    const el = document.querySelector(selector);
+    if (!el) { console.warn(`populateGrid: no element found for "${selector}"`); return; }
+    el.innerHTML = items.map(builder).join('');
+}
+ 
+// Append timeline entries into a container (keeps any existing <hr> intact).
+function populateTimeline(selector, items) {
+    const el = document.querySelector(selector);
+    if (!el) { console.warn(`populateTimeline: no element found for "${selector}"`); return; }
+    el.insertAdjacentHTML('beforeend', items.map(buildTimelineEntry).join(''));
+}
+ 
+ 
+// Loading data from .json files
+ 
+async function loadData() {
+    try {
+        const [projects, skills, experience] = await Promise.all([
+            fetch('data/projects.json').then(r => r.json()),
+            fetch('data/skills.json').then(r => r.json()),
+            fetch('data/experience.json').then(r => r.json()),
+        ]);
+ 
+        // Skills
+        populateGrid('.languages .skill-pills',  skills.languages,  buildSkillPill);
+        populateGrid('.frameworks .skill-pills', skills.frameworks, buildSkillPill);
+        populateGrid('.tools .skill-pills',      skills.tools,      buildSkillPill);
+ 
+        // Experience
+        populateTimeline('.professional-timeline',      experience.professional);
+        populateTimeline('.past-professional-timeline', experience.professional_past);
+ 
+        // Leadership & Volunteer 
+        populateTimeline('.leadership-timeline',      experience.leadership);
+        populateTimeline('.past-leadership-timeline', experience.leadership_past);
+        populateTimeline('.volunteer-timeline',       experience.volunteer);
+        populateTimeline('.past-volunteer-timeline',  experience.volunteer_past);
+ 
+        // Projects 
+        populateGrid('.internship-grid',    projects.internship,    buildProjectCard);
+        populateGrid('.academic-grid',      projects.academic,      buildProjectCard);
+        populateGrid('.past-academic-grid', projects.academic_past, buildProjectCard);
+        populateGrid('.personal-grid',      projects.personal,      buildProjectCard);
+ 
+    } catch (err) {
+        console.error('Failed to load portfolio data:', err);
+    }
+}
+ 
+loadData();

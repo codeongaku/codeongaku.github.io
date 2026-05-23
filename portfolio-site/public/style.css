@@ -1,6 +1,6 @@
 /* General Styling */
 :root {
-    /* New Dark Theme Colors */
+    /* Dark Theme Colors */
     --primary-bg: #030420; /* Very Dark Navy/Black */
     --secondary-bg: #090B38; /* Slightly lighter background for sections */
     --primary-text: #E0E7FF; /* Light blue/white text */
@@ -317,7 +317,7 @@ header.dark-header {
   flex-shrink: 0;
 }
 
-/* --- EXPERIENCE SECTION: Timeline Styling --- */
+/* EXPERIENCE SECTION: Timeline Styling */
 
 .experience-section {
     padding-top: 1rem;
@@ -458,6 +458,7 @@ header.dark-header {
 
 /* --- COLLAPSIBLE BUTTON STYLING --- */
 .past-employment-content,
+.past-academic-content,
 .past-leadership-content {
     margin-top: 20px;
     background-color: var(--secondary-bg);
@@ -471,12 +472,14 @@ header.dark-header {
 }
 
 .past-employment-content.active,
+.past-academic-content.active,
 .past-leadership-content.active {
     max-height: 1000px; /* Increased max-height to ensure content fits */
     transition: max-height 0.5s ease-in;
 }
 
 .past-employment-content .collapsed-title,
+.past-academic-content .collapsed-title,
 .past-leadership-content .collapsed-title {
     color: var(--primary-text);
     font-size: 1.5rem;
@@ -513,7 +516,7 @@ header.dark-header {
     margin: 3px 0;
 }
 
-/* --- Responsive Timeline Adjustments --- */
+/* Responsive Timeline Adjustments */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(3, 1fr); /* Collapse to 3 columns on small screens */
@@ -559,13 +562,13 @@ header.dark-header {
 
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 
 footer {
     background-color: var(--primary-bg);
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 1000px) {
     .current-grid {
@@ -619,7 +622,7 @@ footer {
     }
 }
 
-/* --- PROJECTS SECTION --- */
+/* PROJECTS SECTION */
 
 .projects-section {
     padding-top: 1rem;
@@ -759,7 +762,7 @@ footer {
     }
 }
 
-/* --- FUN FACTS SECTION --- */
+/* FUN FACTS SECTION */
 
 .fun-facts-section {
   padding-bottom: 2rem;
@@ -837,9 +840,36 @@ footer {
   }
 }
 
-/* --- CONTACT SECTION --- */
+/* CONTACT SECTION */
 
 .contact-section {
     padding-top: 1rem;
     padding-bottom: 1.5rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.card-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.card-btn:hover { opacity: 0.8; }
+
+.btn-ghost {
+  border: 1px solid var(--border, #252836);
+  color: var(--text-muted, #7a7f9a);
+}
+
+.btn-accent {
+  background: var(--accent, #7b8cde);
+  color: #fff;
 }

@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies - Rumaisa Talukder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #030420;
+      --surface:      #090B38;
+      --surface-2:    #1a1d27;
+      --border:       #252836;
+      --accent:       #7b8cde;
+      --accent-warm:  #de9b7b;
+      --text:         #e2e4ef;
+      --text-muted:   #7a7f9a;
+      --text-dim:     #4a4f6a;
+      --tag-bg:       #1e2135;
+      --radius:       10px;
+      --font-family: 'Poppins', sans-serif;
+      --sans: 'Poppins', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-family);
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header a.back {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a.back:hover { color: var(--accent); }
+    .site-header a.back::before { content: '←'; }
+
+    .site-header .brand {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 60px 40px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-hero .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .page-hero h1 {
+      font-family: var(--sans);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .page-hero p {
+      color: var(--text-muted);
+      max-width: 560px;
+      font-size: 13.5px;
+    }
+
+    /* TAB NAV */
+    .tab-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .tab-nav {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      padding: 12px 20px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn .tab-num {
+      font-size: 10px;
+      background: var(--tag-bg);
+      color: var(--text-dim);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: var(--mono);
+    }
+
+    .tab-btn:hover { color: var(--text); }
+
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .tab-btn.active .tab-num {
+      background: rgba(123,140,222,0.15);
+      color: var(--accent);
+    }
+
+    /* TAB PANELS */
+    .tab-panel {
+      display: none;
+      padding: 48px 0 80px;
+      animation: fadeIn 0.25s ease;
+    }
+    .tab-panel.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CASE STUDY LAYOUT */
+    .cs-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+
+    .cs-header h2 {
+      font-family: var(--sans);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .cs-header .subtitle {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .cs-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .cs-tag {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .cs-tag.highlight {
+      border-color: rgba(123,140,222,0.4);
+      color: var(--accent);
+      background: rgba(123,140,222,0.08);
+    }
+
+    /* SECTION BLOCKS */
+    .cs-section {
+      margin-bottom: 44px;
+    }
+
+    .cs-section-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cs-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .cs-section p {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      line-height: 1.75;
+      max-width: 680px;
+    }
+
+    .cs-section p + p { margin-top: 12px; }
+
+    /* TWO-COL GRID */
+    .cs-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .cs-two-col { grid-template-columns: 1fr; }
+      .cs-header { grid-template-columns: 1fr; }
+      .cs-meta { align-items: flex-start; }
+      .page-hero, .tab-wrapper { padding-left: 20px; padding-right: 20px; }
+    }
+
+    /* INFO CARDS */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+
+    .info-card h4 {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .info-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .info-card li {
+      color: var(--text-muted);
+      font-size: 13px;
+      padding-left: 14px;
+      position: relative;
+    }
+    .info-card li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* PROCESS STEPS */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .process-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step::before {
+      content: attr(data-n);
+      position: absolute;
+      top: -6px;
+      right: 10px;
+      font-family: var(--sans);
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--border);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .process-step h4 {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .process-step p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: none;
+    }
+
+    /* OUTCOME BANNER */
+    .outcome-banner {
+      background: linear-gradient(135deg, rgba(123,140,222,0.1), rgba(222,155,123,0.06));
+      border: 1px solid rgba(123,140,222,0.25);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .outcome-banner .outcome-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .outcome-banner p {
+      color: var(--text);
+      font-size: 13.5px;
+      max-width: none;
+    }
+
+    .outcome-banner strong { color: var(--accent); }
+
+    /* TECH PILLS */
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-pill {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+    }
+
+    /* IMAGE PLACEHOLDER */
+    .img-placeholder {
+      background: var(--surface-2);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    .img-placeholder .ph-icon { font-size: 28px; opacity: 0.4; }
+
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    /* FIGMA EMBED */
+    .figma-embed {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .figma-embed iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
+
+    .figma-note {
+      padding: 10px 16px;
+      font-size: 11.5px;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 40px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    .site-footer a { color: var(--text-muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="back">Back to Portfolio</a>
+    <a href="index.html" class="brand">Rumaisa Talukder</a>
+  </header>
+
+  <div class="page-hero">
+    <p class="eyebrow">Design Process & Thinking</p>
+    <h1>Case Studies</h1>
+    <p>A closer look at how I approach design problems — from research and ideation through to final implementation.</p>
+  </div>
+
+  <div class="tab-wrapper">
+
+    <!-- TAB NAV -->
+    <nav class="tab-nav" role="tablist" aria-label="Case studies">
+      <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="panel-peerhive"  id="tab-peerhive"  onclick="switchTab('peerhive')">PeerHive <span class="tab-num">01</span></button>
+      <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-fanfest"   id="tab-fanfest"   onclick="switchTab('fanfest')">FanFest Expo <span class="tab-num">02</span></button>
+      <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-cartify"   id="tab-cartify"   onclick="switchTab('cartify')">Cartify <span class="tab-num">03</span></button>
+      <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-navis"     id="tab-navis"     onclick="switchTab('navis')">NAVIS <span class="tab-num">04</span></button>
+    </nav>
+
+    <!-- peerhive tab -->
+    <div class="tab-panel active" id="panel-peerhive" role="tabpanel" aria-labelledby="tab-peerhive">
+
+      <div class="cs-header">
+        <div>
+          <h2>PeerHive</h2>
+          <p class="subtitle">Designathon · November 2025 · 5.5 hours</p>
+        </div>
+        <div class="cs-meta">
+          <span class="cs-tag highlight">🏆 1st Place — Experienced Track</span>
+          <span class="cs-tag">UX Research · Prototyping</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Overview</p>
+        <p>PeerHive is a social discovery platform designed to help students find mentors and mentees based on shared interests and skill proficiency. Built end-to-end in 5.5 hours at a Designathon, the project challenged our team to move fast without skipping the fundamentals.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">The Problem</p>
+        <p>Students often struggle to find the right mentorship connections — existing platforms are either too broad or require institutional gatekeeping. The prompt asked us to design a solution that made meaningful peer connections more accessible and low-friction.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Research</p>
+        <div class="cs-two-col">
+          <div class="info-card">
+            <h4>Primary Research</h4>
+            <ul>
+              <li>User surveys distributed to students</li>
+              <li>Identified pain points with existing discovery tools</li>
+              <li>Mapped motivations for seeking / offering mentorship</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Secondary Research</h4>
+            <ul>
+              <li>Reviewed platforms students currently use (LinkedIn, Discord)</li>
+              <li>Analyzed reviews and common frustrations</li>
+              <li>Identified gaps in skill-based matching</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step" data-n="1">
+            <h4>Discover</h4>
+            <p>User surveys + competitive review to define the problem space before touching Figma.</p>
+          </div>
+          <div class="process-step" data-n="2">
+            <h4>Define</h4>
+            <p>Synthesized research into a clear problem statement and user needs.</p>
+          </div>
+          <div class="process-step" data-n="3">
+            <h4>Ideate</h4>
+            <p>Rapid sketching and team alignment on core flows and features.</p>
+          </div>
+          <div class="process-step" data-n="4">
+            <h4>Prototype</h4>
+            <p>High-fidelity prototype in HTML/CSS delivered within the time limit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Designs</p>
+        <div class="img-grid">
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Placeholder</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Placeholder</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Placeholder</span></div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Tech Used</p>
+        <div class="tech-pills">
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">FigJam</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Outcome</p>
+        <div class="outcome-banner">
+          <span class="outcome-icon">🏆</span>
+          <p>Placed <strong>1st in the Experienced Track</strong>. The research-first approach — defining the problem before opening design tools — was a core reason the final prototype felt cohesive and user-grounded despite the time constraint.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- fanfest expo tab-->
+    <div class="tab-panel" id="panel-fanfest" role="tabpanel" aria-labelledby="tab-fanfest">
+
+      <div class="cs-header">
+        <div>
+          <h2>FanFest Expo</h2>
+          <p class="subtitle">CPSC 481 — Human-Computer Interaction I · Winter 2025</p>
+        </div>
+        <div class="cs-meta">
+          <span class="cs-tag">HCI · Accessibility · Cross-platform</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Overview</p>
+        <p>FanFest Expo is a convention navigation system designed to help attendees find panels, vendors, and events across a large venue. The project was built for CPSC 481 (Human-Computer Interaction I), applying HCI principles and WCAG accessibility standards throughout the entire design and development process.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">The Problem</p>
+        <p>Convention-goers often feel overwhelmed navigating large, multi-hall events with dense schedules and limited wayfinding. The goal was to design an intuitive navigation tool that works across mobile and desktop, reduces cognitive load, and remains accessible to all users.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step" data-n="1">
+            <h4>Research</h4>
+            <p>Studied existing event apps and identified usability gaps through HCI literature and heuristic evaluation.</p>
+          </div>
+          <div class="process-step" data-n="2">
+            <h4>Wireframes</h4>
+            <p>Low and mid-fidelity wireframes for both mobile and desktop layouts.</p>
+          </div>
+          <div class="process-step" data-n="3">
+            <h4>Accessibility</h4>
+            <p>Applied WCAG standards: contrast ratios, keyboard navigation, semantic HTML, ARIA labels.</p>
+          </div>
+          <div class="process-step" data-n="4">
+            <h4>Implementation</h4>
+            <p>Responsive Next.js front end deployed via Vercel, matching the high-fidelity Figma prototypes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Designs</p>
+        <div class="img-grid">
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Mobile prototype</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Desktop prototype</span></div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Tech Used</p>
+        <div class="tech-pills">
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">Vercel</span>
+          <span class="tech-pill">Node.js</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Key Decisions</p>
+        <div class="cs-two-col">
+          <div class="info-card">
+            <h4>Mobile-First Layout</h4>
+            <ul>
+              <li>Convention attendees are on the go</li>
+              <li>Thumb-friendly navigation zones</li>
+              <li>Progressive enhancement for desktop</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Accessibility First</h4>
+            <ul>
+              <li>WCAG AA contrast compliance throughout</li>
+              <li>Semantic HTML for screen reader support</li>
+              <li>Keyboard-navigable interface</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- cartify tab -->
+    <div class="tab-panel" id="panel-cartify" role="tabpanel" aria-labelledby="tab-cartify">
+
+      <div class="cs-header">
+        <div>
+          <h2>Cartify</h2>
+          <p class="subtitle">SENG 513 — Web-Based Systems · Fall 2025</p>
+        </div>
+        <div class="cs-meta">
+          <span class="cs-tag">Full-Stack · Product Design · Team Lead</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Overview</p>
+        <p>Cartify is a full-stack marketplace platform that combines product buying and renting into a single, cohesive experience. As team lead, I owned both the product design and GitLab collaboration, designing high-fidelity prototypes for mobile and desktop before any code was written.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">The Problem</p>
+        <p>Users who want to buy or rent products are forced to use separate platforms, creating friction and fragmenting the experience. Cartify aimed to unify both models under one interface without overwhelming the user with complexity.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">My Role</p>
+        <div class="cs-two-col">
+          <div class="info-card">
+            <h4>Design</h4>
+            <ul>
+              <li>Led all UI/UX design in Figma</li>
+              <li>Mobile and desktop high-fidelity prototypes</li>
+              <li>Design system and component decisions</li>
+              <li>User flows for buy, rent, and listing flows</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Engineering</h4>
+            <ul>
+              <li>Project lead — managed GitLab and sprints</li>
+              <li>Contributed to React front-end implementation</li>
+              <li>Coordinated back-end integration (Node.js + MySQL)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Design Process</p>
+        <div class="process-steps">
+          <div class="process-step" data-n="1">
+            <h4>Define</h4>
+            <p>Mapped out core user journeys: browsing, buying, renting, and listing.</p>
+          </div>
+          <div class="process-step" data-n="2">
+            <h4>Prototype</h4>
+            <p>High-fidelity Figma prototypes for mobile and desktop before development began.</p>
+          </div>
+          <div class="process-step" data-n="3">
+            <h4>Build</h4>
+            <p>Full-stack implementation in React, Node.js, and MySQL with Docker.</p>
+          </div>
+          <div class="process-step" data-n="4">
+            <h4>Iterate</h4>
+            <p>Adjusted designs based on what surfaced during development and peer review.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Designs</p>
+        <div class="img-grid">
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Mobile prototype</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Desktop prototype</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>Component overview</span></div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Tech Used</p>
+        <div class="tech-pills">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">GitLab</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- nais tabs -->
+    <div class="tab-panel" id="panel-navis" role="tabpanel" aria-labelledby="tab-navis">
+
+      <div class="cs-header">
+        <div>
+          <h2>NAVIS</h2>
+          <p class="subtitle">ENEL 500 — Engineering Capstone · Fall 2025 - Winter 2026</p>
+        </div>
+        <div class="cs-meta">
+          <span class="cs-tag">Mobile App · BLE · Multidisciplinary</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Overview</p>
+        <p>NAVIS is a smart navigation glasses system designed to improve safety and accessibility for non-motorized travellers. My contribution was the mobile companion app — built in React Native (Expo) with TypeScript — providing real-time navigation support and BLE connectivity to the hardware.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">The Problem</p>
+        <p>Non-motorized travellers (cyclists, pedestrians, mobility aid users) often rely on phones for navigation, which requires looking away from the path. NAVIS offloads navigation cues to a wearable display, with the companion app serving as the configuration and control hub.</p>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">My Role — Mobile App</p>
+        <div class="cs-two-col">
+          <div class="info-card">
+            <h4>UX Design</h4>
+            <ul>
+              <li>Designed the companion app interface in Figma</li>
+              <li>Navigation SDK integration flows</li>
+              <li>BLE pairing and status UI</li>
+              <li>Accessibility considerations for on-the-go use</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h4>Development</h4>
+            <ul>
+              <li>React Native (Expo) + TypeScript implementation</li>
+              <li>Real-time BLE connectivity with nRF52840 MCU</li>
+              <li>Navigation SDK integration</li>
+              <li>Agile sprints with bi-weekly reviews in Jira</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Design Considerations</p>
+        <div class="process-steps">
+          <div class="process-step" data-n="1">
+            <h4>Glanceability</h4>
+            <p>App used while in motion — UI needed to communicate status at a glance.</p>
+          </div>
+          <div class="process-step" data-n="2">
+            <h4>BLE States</h4>
+            <p>Clear feedback for connecting, connected, and disconnected hardware states.</p>
+          </div>
+          <div class="process-step" data-n="3">
+            <h4>Cross-team</h4>
+            <p>Coordinated design decisions with hardware and firmware teams throughout.</p>
+          </div>
+          <div class="process-step" data-n="4">
+            <h4>Iteration</h4>
+            <p>Designs updated as firmware capabilities evolved over the project timeline.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Designs</p>
+        <div class="img-grid">
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>App UI screens</span></div>
+          <div class="img-placeholder"><span class="ph-icon">🖼</span><span>BLE pairing flow</span></div>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <p class="cs-section-label">Tech Used</p>
+        <div class="tech-pills">
+          <span class="tech-pill">React Native</span>
+          <span class="tech-pill">Expo</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">Jira</span>
+          <span class="tech-pill">BLE / nRF52840</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /tab-wrapper -->
+
+  <footer class="site-footer">
+    <p>© 2025 Rumaisa Talukder &nbsp;·&nbsp; <a href="index.html">Portfolio</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:talukderrumaisa25@gmail.com">Email</a></p>
+  </footer>
+
+  <script>
+    function switchTab(id) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+
+      document.getElementById('tab-' + id).classList.add('active');
+      document.getElementById('tab-' + id).setAttribute('aria-selected', 'true');
+      document.getElementById('panel-' + id).classList.add('active');
+
+      // If linked directly via hash, scroll to tab nav
+      document.querySelector('.tab-nav').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Support direct hash links e.g. case-studies.html#fanfest
+    const hash = window.location.hash.replace('#', '');
+    const validTabs = ['peerhive', 'fanfest', 'cartify', 'navis'];
+    if (hash && validTabs.includes(hash)) switchTab(hash);
+  </script>
+
+</body>
+</html>

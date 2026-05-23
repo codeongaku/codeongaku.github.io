@@ -1,0 +1,167 @@
+{
+  "professional": [
+    {
+      "title": "UI/UX Designer & Front-End Developer",
+      "company": "WealthPath @ Enactus",
+      "date": "November 2025 - May 2026",
+      "side": "right",
+      "points": [
+        "Implemented front-end features in TypeScript and React for a financial literacy platform, ensuring brand alignment",
+        "Designed and iterated UI/UX solutions in Figma, conducting user research and collaborating cross-functionally to align decisions with technical requirements",
+        "Collaborated with development teams via GitHub and Agile sprints, with task and bug management using Jira"
+      ]
+    },
+    {
+      "title": "Industrial Automation Engineering Intern",
+      "company": "Canadian Natural Resources Limited",
+      "date": "Jan 2024 - Dec 2024",
+      "side": "left",
+      "points": [
+        "Developed custom desktop applications in C# using Microsoft Visual Studio and SSMS to streamline operational workflows, database management, and report generation",
+        "Improved process efficiency by reducing fully manual processes, e.g.",
+        "- Built a DCS Alarm Application, automating multi-criteria data input and filtering, and generating pre-populated Excel/Word reports, improving a fully manual process by 40%-50% in time",
+        "Observed on-site operator fieldwork and industrial machinery to gather data on network assets, guiding implementation of data-driven software solutions for workflow improvements",
+        "Converted multiple VB applications to C# and introduced new functionalities, increasing usability"
+      ]
+    }
+  ],
+  "professional_past": [
+    {
+      "title": "Shift Supervisor",
+      "company": "Tim Hortons",
+      "date": "Dec 2022 - Dec 2023",
+      "side": "right",
+      "points": [
+        "Led and supervised a multi-cultural team, optimizing workflows for peak efficiency and customer satisfaction",
+        "Simultaneously carried out various roles whilst overseeing operations and team efficiency",
+        "Effectively managed inventory levels, minimizing waste and ensuring product availability while coordinating with suppliers for timely restocking"
+      ]
+    },
+    {
+      "title": "Data Entry Specialist",
+      "company": "NoxBit Digital",
+      "date": "April 2022 - May 2023",
+      "side": "left",
+      "points": [
+        "Collaborated with the Electrical and Software Engineering Department and professors",
+        "Organized and executed various academic and professional events, such as the Internship Panel",
+        "Gathered and analyzed feedback from students to enhance their academic experience and performance"
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "title": "UCalgary Head Delegate",
+      "company": "Canadian University Software Engineering Conference (CUSEC)",
+      "date": "September 2025 - February 2026",
+      "side": "right",
+      "points": [
+        "Part of the organizing team for the 3-day CUSEC 2026 conference in Montréal with over 200 attendees",
+        "Facilitated and coordinated various technical workshops, speaker sessions, and social events",
+        "Planned trip and conference logistics for the UCalgary delegation, leading a team of 17"
+      ]
+    },
+    {
+      "title": "VP Design",
+      "company": "TechStart UCalgary",
+      "date": "July 2025 - May 2026",
+      "side": "left",
+      "points": [
+        "Provide guidance using UI/UX principles, design thinking, UX strategy, Figma/FigJam, and usability testing",
+        "Lead design workshops to help project teams deliver user-centered solutions",
+        "Judging during project showcases in terms of UI/UX, software development, and business strategy"
+      ]
+    },
+    {
+      "title": "President",
+      "company": "Electrical & Software Engineering Students' Society (ZOO)",
+      "date": "April 2025 - May 2026",
+      "side": "right",
+      "points": [
+        "Lead one of the major students societies, assisting over 1500+ students and managing a council of 40 members",
+        "Driving organizational strategy and fostering an inclusive, engaged community"
+      ]
+    },
+    {
+      "title": "Senior Orientation Leader",
+      "company": "University of Calgary | Orientation 2025",
+      "date": "August 2025",
+      "side": "left",
+      "points": [
+        "Supported a team of Orientation Leaders alongside incoming first-year engineering students",
+        "Helped newcomers turn day-one nerves into confidence through guidance, acknowledgement, and encouragement"
+      ]
+    }
+  ],
+  "leadership_past": [
+    {
+      "title": "VP Schools",
+      "company": "Robogals UCalgary",
+      "date": "April 2022 - May 2023",
+      "side": "right",
+      "points": [
+        "Liaised with libraries and schools in Calgary to arrange technical workshops and activities designed to encourage youths into STEM",
+        "Facilitated event registration and collected feedback from students' guardians and instructors",
+        "Attended workshops and volunteered to assist participants in their projects"
+      ]
+    },
+    {
+      "title": "VP Academic",
+      "company": "Electrical & Software Engineering Students' Society (ZOO)",
+      "date": "April 2022 - May 2023",
+      "side": "left",
+      "points": [
+        "Collaborated with the Electrical and Software Engineering Department and professors",
+        "Organized and executed various academic and professional events, such as the Internship Panel",
+        "Gathered and analyzed feedback from students to enhance their academic experience and performance"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "title": "Mentor",
+      "company": "First-Generation Mentorship Program",
+      "date": "April 2025 - Present",
+      "side": "left",
+      "points": [
+        "Supporting new and current international students who are the first in their family to attend post-secondary in Canada or in general",
+        "Responded to their queries, guided them to helpful resources, and shared relevant personal experiences to ensure they have a smooth transition into university life"
+      ]
+    }
+  ],
+  "volunteer_past": [
+    {
+      "title": "English Teaching Mentor",
+      "company": "Edu.Dialect",
+      "date": "January 2022 - April 2022",
+      "side": "right",
+      "points": [
+        "Worked with my student over a series of sessions to assist them in improving their English communication skills",
+        "Aspects include but is not limited to pronunciation, grammatical accuracy, and written skills",
+        "Provided valuable advice and strategies for self-improvement"
+      ]
+    },
+    {
+      "title": "Orientation Leader",
+      "company": "University of Calgary",
+      "date": "Aug 2021 – Sep 2021 · Aug 2022 – Sep 2022",
+      "side": "left",
+      "points": [
+        "Worked together with my team to welcome groups of incoming students through two days of Fall Orientation",
+        "Provided knowledge and personal experiences to ensure they have a smooth transition into university life",
+        "Responded to queries and guided students to helpful or necessary resources"
+      ]
+    },
+    {
+      "title": "Mentor",
+      "company": "GPS Mentorship Program (Prev. ISS Mentorship Program)",
+      "date": "July 2021 - December 2022",
+      "side": "right",
+      "points": [
+        "Supported new and current international students, responded to their queries, and guided them to helpful resources",
+        "Provided peer advice regarding studies at the University of Calgary and adapting to life in Calgary",
+        "Shared relevant personal experiences and attended events with my mentee(s) to enhance our mentor-mentee bond"
+      ]
+    }
+  ]
+}
