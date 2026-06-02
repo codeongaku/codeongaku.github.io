@@ -1,0 +1,881 @@
+/*
+    style.css - for Main portfolio (index.html)
+    imports from themes.css
+*/
+
+/* General Styling */
+
+:root {
+    /* Dark Theme Colors */
+    --primary-bg: #030420; /* Very Dark Navy/Black */
+    --secondary-bg: #090B38; /* Slightly lighter background for sections */
+    --primary-text: #E0E7FF; /* Light blue/white text */
+    --secondary-text: #BCC5E8; /* Subdued text/links */
+    --accent-color: #5C67C2; /* Deep violet/blue for highlights */
+    --header-link-color: #E0E7FF;
+    
+    --font-family: 'Poppins', sans-serif;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* Base styles for h2/h3 and main container */
+main {
+    max-width: 1100px; /* Increased width for new design */
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: var(--secondary-bg);
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: var(--primary-text);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+p, ul {
+    color: var(--secondary-text);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.6rem;
+    font-weight: 300;
+}
+
+/* --- HEADER & NAVIGATION --- */
+
+header.dark-header {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin: 0;
+    min-height: auto;
+}
+
+.logo p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    min-height: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: var(--header-link-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Separator styling from mockup */
+.main-nav li:not(:last-child) a::after {
+    content: "|";
+    color: var(--secondary-text);
+    margin-left: 1.5rem;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Typing cursor */
+.typing-cursor {
+    background-color: var(--primary-text);
+}
+
+
+/* --- ABOUT ME SECTION --- */
+.about-hero {
+    background: none; /* Make this section transparent against the body */
+    box-shadow: none;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+}
+
+.about-hero h2 {
+    border-bottom: none;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+    line-height: 1.8;
+}
+
+.summary-line {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-line {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-text);
+}
+
+.about-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    transition: color 0.3s;
+}
+
+.about-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-text);
+}
+
+.image-placeholder {
+    width: 35%;
+    min-width: 250px;
+    height: 300px;
+    background-color: #1a1c4d; /* Darker purple-blue */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+/* --- CURRENT SECTION (Roles, Projects, Skills) --- */
+
+.current-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.current-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    margin-top: 1rem;
+}
+
+.current-item {
+    background-color: #030420;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.current-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.current-item li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* --- SKILLS SECTION --- */
+
+.skills-section {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.skills-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-category {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: skillFadeIn 0.55s ease forwards;
+}
+.skill-category:nth-child(1) { animation-delay: 0.1s; }
+.skill-category:nth-child(2) { animation-delay: 0.25s; }
+.skill-category:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes skillFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.category-label {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color, #7b8cde);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 178, 216, 0.18);
+  background: rgba(168, 178, 216, 0.05);
+  color: var(--secondary-text, #a8b2d8);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: default;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(168, 178, 216, 0.12);
+  border-color: rgba(168, 178, 216, 0.45);
+  color: #dce3f7;
+  box-shadow: 0 0 12px rgba(168, 178, 216, 0.15);
+}
+
+.skill-icon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* EXPERIENCE SECTION: Timeline Styling */
+
+.experience-section {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.experience-section h2 {
+    margin-bottom: 0;
+}
+
+.timeline-container {
+    margin-top: rem;
+}
+
+.timeline-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-container hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.timeline-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: relative;
+}
+
+/* Vertical Divider Line (Placeholder for visual timeline effect) */
+.timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Content Blocks */
+.entry-content {
+    width: 45%; /* Keeps space for the vertical line in the middle */
+    padding: 15px;
+    background-color: var(--primary-bg); /* Darker background for content boxes */
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.entry-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.entry-content h4 {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+.company {
+    font-style: italic;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.entry-content ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.entry-content li {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.3rem;
+}
+
+/* Date Blocks */
+.entry-date {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    padding: 15px;
+}
+
+/* Arrangement for non-reversed (content on right) */
+.left-date {
+    justify-content: flex-end; /* Push date to the right edge */
+    text-align: right;
+    align-self: center; 
+}
+
+/* Arrangement for reversed (content on left) */
+.timeline-entry.reversed .entry-date {
+    justify-content: flex-start; /* Push date to the left edge */
+    text-align: left;
+    align-self: center; 
+}
+
+/* --- COLLAPSIBLE BUTTON STYLING --- */
+
+.collapse-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.collapse-button {
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.collapse-button:hover {
+    background-color: #7b85e0; /* Slightly lighter on hover */
+}
+
+/* --- COLLAPSIBLE BUTTON STYLING --- */
+.past-employment-content,
+.past-academic-content,
+.past-leadership-content {
+    margin-top: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Used for the JavaScript toggle effect */
+    overflow: hidden; 
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.past-employment-content.active,
+.past-academic-content.active,
+.past-leadership-content.active {
+    max-height: 1000px; /* Increased max-height to ensure content fits */
+    transition: max-height 0.5s ease-in;
+}
+
+.past-employment-content .collapsed-title,
+.past-academic-content .collapsed-title,
+.past-leadership-content .collapsed-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    background-color: #0d0e3d; 
+}
+
+/* Ensure the timeline inside the collapsed section looks correct */
+.past-experience-timeline {
+    /* Inherits from .timeline-container */
+    margin-top: 0;
+    padding: 1rem 0; 
+}
+
+.past-leadership-timeline hr {
+    margin-bottom: 20px;
+}
+
+/* Style for multi-row dates */
+.entry-date.multi-date {
+    /* Explicitly align items for stacking multiple dates */
+    align-items: center; /* Right-align dates on the left side */
+}
+
+.timeline-entry.reversed .entry-date.multi-date {
+    align-items: center; /* Left-align dates on the right side (reversed entry) */
+}
+
+.entry-date span {
+    display: block; /* Ensure each date span occupies its own line */
+    margin: 3px 0;
+}
+
+/* Responsive Timeline Adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* Collapse to 3 columns on small screens */
+    }
+    
+    .timeline-entry {
+        flex-direction: column; /* Stack content and date vertically */
+        padding: 0;
+    }
+
+    .timeline-entry::before {
+        /* Move timeline line to the left edge */
+        left: 15px; 
+    }
+
+    .entry-content, .entry-date {
+        width: 100%;
+        padding: 10px 10px 10px 40px; /* Add padding for the line on the left */
+        text-align: left;
+    }
+    
+    .entry-date {
+        justify-content: flex-start;
+        font-size: 0.85rem;
+        padding-bottom: 0;
+    }
+
+    .entry-content {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .entry-date.multi-date {
+        align-items: flex-start; /* Ensure dates stack nicely and left-align on mobile */
+    }
+
+    .timeline-entry.reversed .entry-content {
+        order: 2;
+    }
+    .timeline-entry.reversed .entry-date {
+        order: 1;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--primary-bg);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+    .current-grid {
+        /* Collapse to two columns on medium screens */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        margin-top: 1rem;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .main-nav li:not(:last-child) a::after {
+        content: ""; /* Remove separator */
+        margin-left: 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        order: 2; /* Text below image on small screens */
+    }
+    
+    .image-placeholder {
+        width: 80%;
+        max-width: 300px;
+        height: 250px;
+        margin-bottom: 2rem;
+        order: 1; /* Image above text on small screens */
+    }
+
+    .current-grid {
+        /* Collapse to a single column on small screens */
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* PROJECTS SECTION */
+
+.projects-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.project-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.category-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Alignment for Academic header/divider */
+.academic-category .category-title.right-aligned,
+.academic-category .category-divider.right-aligned {
+    text-align: right;
+    margin-left: auto;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 30px;
+}
+
+/* Internship Grid: 2 Columns */
+.internship-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Academic Grid: 3 Columns */
+.academic-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Personal Grid: 2 Columns */
+.personal-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card {
+    background-color: #0d0e3d; /* Dark blue/purple background matching the mockup cards */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #1a1c4d; /* Darker placeholder color */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.project-card h4 {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.project-source {
+    font-style: italic;
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-summary {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Collapsible Content - Reusing styles */
+#past-academic-content {
+    /* Ensures the same styling as the leadership/volunteer collapsed sections */
+    background-color: var(--secondary-bg);
+}
+
+/* --- Responsive Projects Grid Adjustments --- */
+@media (max-width: 1000px) {
+    .academic-grid {
+        /* Collapse 3-column grid to 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .internship-grid,
+    .academic-grid {
+        /* Collapse all grids to 1 column on small screens */
+        grid-template-columns: 1fr;
+    }
+    
+    .category-title {
+        text-align: center;
+    }
+
+    .academic-category .category-title.right-aligned,
+    .academic-category .category-divider.right-aligned {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* FUN FACTS SECTION */
+
+.fun-facts-section {
+  padding-bottom: 2rem;
+}
+
+.fun-facts-intro {
+  color: var(--secondary-text, #a8b2d8);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.fun-facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.fact-card {
+  border: 1px solid rgba(168, 178, 216, 0.15);
+  border-radius: 16px;
+  padding: 1rem;
+  background: rgba(168, 178, 216, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: factFadeIn 0.5s ease forwards;
+}
+
+.fact-card:nth-child(1) { animation-delay: 0.1s; }
+.fact-card:nth-child(2) { animation-delay: 0.22s; }
+.fact-card:nth-child(3) { animation-delay: 0.34s; }
+
+@keyframes factFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fact-card:hover {
+  background: rgba(168, 178, 216, 0.09);
+  border-color: rgba(168, 178, 216, 0.35);
+  transform: translateY(-3px);
+}
+
+.fact-card__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.fact-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #dce3f7;
+  margin: 0;
+}
+
+.fact-card p {
+  font-size: 0.85rem;
+  color: var(--secondary-text, #a8b2d8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.fact-highlight {
+  color: #dce3f7;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .fun-facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.card-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.card-btn:hover { opacity: 0.8; }
+
+.btn-ghost {
+  border: 1px solid var(--border, #252836);
+  color: var(--text-muted, #7a7f9a);
+}
+
+.btn-accent {
+  background: var(--accent, #7b8cde);
+  color: #fff;
+}

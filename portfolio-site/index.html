@@ -4,100 +4,138 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rumaisa Talukder</title>
+    <title>Rumaisa Talukder — Software Engineer & UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Rumaisa Talukder — Software Engineering student at UCalgary with experience in frontend development, full-stack systems, and UI/UX design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/themes.css" />
     <link rel="stylesheet" href="public/style.css" />
 </head>
 
 <body>
-    <header class="dark-header">
-        <div class="header-content">
-            <div class="logo">
-                <h1>Rumaisa Talukder</h1>
-                <p id="typing-text"></p>
-            </div>
+    <header class="site-header">
+        <a href="#about" class="brand">RT<span>.</span></a>
 
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#current">Current</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#lead-volun">Leadership/Volunteer</a></li>
-                </ul>
-            </nav>
+        <nav class="main-nav">
+            <a href="#about">About</a>
+            <a href="#current">Current</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#lead-volun">Leadership</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="theme-switcher" aria-label="Switch theme">
+                <button class="theme-btn" data-theme="obsidian" title="Obsidian"></button>
+                <button class="theme-btn" data-theme="canvas"   title="Canvas"></button>
+                <button class="theme-btn" data-theme="slate"    title="Slate"></button>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- ABOUT SECTION -->
         <section id="about" class="about-hero">
-            <h2>About Me:</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="summary-line">Software Engineering student</p>
-                    <p class="summary-line">
-                        Passion for problem-solving and user insight integration
-                    </p>
-                    <p class="summary-line">
-                        Experience and knowledge in Development and User Design (UI/UX)
-                    </p>
+            <div class="about-text">
+                <h1>Rumaisa Talukder</h1>
+                <div class="typing-wrapper"><span id="typing-text"></span></div>
 
-                    <p class="education-line">
-                        Education: BSc in Software Engineering @ University of Calgary
-                    </p>
+                <p class="about-lines">
+                    -> Passion for problem-solving and user insight integration <br>
+                    -> Experience and knowledge in Development and User Design (UI/UX)
+                </p>
 
-                    <div class="about-links">
-                        <a href="path/to/resume.pdf" target="_blank">My Resume</a>,
-                        <a href="https://github.com/codeongaku" target="_blank">My GitHub</a>,
-                        <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank">My LinkedIn</a>,
-                        <a href="mailto:talukderrumaisa25@gmail.com">Email Me</a>
-                    </div>
+                <div class="about-education">
+                    BSc Software Engineering @ University of Calgary
                 </div>
 
-                <div class="image-placeholder"></div>
+                <p class="about-bio">
+                    I work on projects that are both <strong>functional and thoughtfully designed</strong>, bridging the gap between engineering and user experience.
+                    From polished prototypes to full-stack systems, I care about how things work <em>and</em> how they feel.
+                </p>
+
+                <div class="about-links">
+                    <a href="casestudy.html" class="about-link primary">Case Studies -></a>
+                    <a href="path/to/resume.pdf" target="_blank" class="about-link ghost">Resume</a>
+                    <!-- <a href="https://github.com/codeongaku" target="_blank" class="about-link ghost">GitHub</a>
+                    <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank" class="about-link ghost">LinkedIn</a>
+                    <a href="mailto:talukderrumaisa25@gmail.com" class="about-link ghost">Email</a> -->
+                </div>
+            </div>
+
+            <div class="about-right">
+                <!-- <img src="photo.jpg" alt="Rumaisa Talukder" class="about-photo"> -->
+                <div class="about-photo-placeholder">RT</div>
+                <!-- <div class="about-links">
+                    <a href="https://github.com/codeongaku" target="_blank" class="about-link ghost">GitHub</a>
+                    <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank" class="about-link ghost">LinkedIn</a>
+                    <a href="mailto:talukderrumaisa25@gmail.com" class="about-link ghost">Email</a>
+                </div> -->
+                <div class="about-social">
+                    <a href="https://github.com/codeongaku" target="_blank" class="about-social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank" class="about-social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:talukderrumaisa25@gmail.com" class="about-social-link" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="current" class="current-section">
-            <h2>Current:</h2>
+        <!-- CURRENT SECTION -->
+        <section id="current" class="section-wrap reveal">
+            <p class="eyebrow">Right Now</p>
+            <h2 class="section-heading">What I'm Working On</h2>
+            <div class="section-divider"></div>
+
             <div class="current-grid">
-                <div class="current-item roles">
-                    <h3>Roles:</h3>
+                <div class="current-card">
+                    <h3>Roles</h3>
                     <ul>
-                        <li>
-                            President @ Electrical & Software Engineering Students Society
-                        </li>
-                        <li>VP Design @ Tech Start UCalgary</li>
-                        <li>
-                            UI/UX Design & Front-End Developer @ WealthPath, Enactus
-                            UCalgary
-                        </li>
+                        <li>President @ Electrical & Software Engineering Students' Society (ZOO)</li>
+                        <li>VP Design @ TechStart UCalgary</li>
+                        <li>UI/UX & Front-End Dev @ WealthPath, Enactus UCalgary</li>
                     </ul>
                 </div>
 
-                <div class="current-item projects-summary">
-                    <h3>Projects:</h3>
+                <div class="current-card">
+                    <h3>Projects</h3>
                     <ul>
-                        <li>WealthPath</li>
-                        <li>Cartify</li>
-                        <li>NAVIS - Capstone</li>
+                        <li>NAVIS — Smart Navigation Glasses (Capstone)</li>
+                        <li>Cartify — Buy & Rent Marketplace</li>
+                        <li>WealthPath — Financial Literacy Platform</li>
                     </ul>
                 </div>
 
-                <div class="current-item skills-summary">
-                    <h3>Skills:</h3>
+                <div class="current-card">
+                    <h3>Stack</h3>
                     <ul>
-                        <li>Figma & Figjam</li>
-                        <li>JS, React Native, Node.js</li>
-                        <li>HTML/CSS, TypeScript</li>
+                        <li>React Native · TypeScript · Next.js</li>
+                        <li>Figma & FigJam</li>
+                        <li>HTML/CSS · Node.js</li>
                         <li>MySQL</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills-section">
-            <h2>Skills:</h2>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section-wrap reveal">
+            <h2 class="section-heading">Skills</h2>
+            <div class="section-divider"></div>
+            
             <div class="skills-grid">
                 <!-- Java & VSCode logos not on simpleicons -->
                 <div class="skill-category languages">
@@ -115,331 +153,216 @@
             </div>
         </section>
         
-        <section id="experience" class="experience-section">
-            <h2>Experience:</h2>
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section-wrap">
+            <p class="eyebrow">Non-Academic Work</p>
+            <h2 class="section-heading">Experience</h2>
+            <div class="section-divider"></div>
 
             <!-- Current professional entries — populated by JS -->
+            <div class="timeline-section-title">Professional</div>
             <div class="timeline-container professional-timeline"></div>
-            <div class="collapse-container">
-                <button id="togglePastEmployment" class="collapse-button">Past Employment Experiences</button>
-                <div id="past-employment-content" class="past-employment-content hidden">
-                    <h3 class="collapsed-title">Past Employment Experiences</h3>
 
-                    <!-- Past professional entries — populated by JS -->
-                    <div class="timeline-container past-professional-timeline">
-                        <hr />
-                    </div>
+            <div class="collapse-wrap">
+                <button id="togglePastEmployment" class="collapse-btn">
+                Past Employment Experiences <span class="collapse-arrow">▼</span>
+                </button>
+            </div>
+            <div id="past-employment-content" class="collapsible-content">
+                <div class="collapsed-inner">
+                <!-- Past professional entries — populated by JS -->
+                <div class="timeline-container past-professional-timeline"></div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
-            <h2>Projects:</h2>
-            <div class="project-category">
-                <h3 class="category-title">Internship</h3>
-                <hr class="category-divider" />
-                <!-- populated by JS -->
-                <div class="projects-grid internship-grid"></div>
+        <!-- PROJECT SECTION -->
+        <section id="projects" class="section-wrap">
+            <p class="eyebrow">Work Overview</p>
+            <h2 class="section-heading">Project Gallery</h2>
+            <div class="section-divider"></div>
+
+            <div class="project-category-header">
+                <h3>Internship</h3>
+                <div class="cat-line"></div>
             </div>
+            <!-- populated by JS -->
+            <div class="projects-grid internship-grid"></div>
  
-            <div class="project-category academic-category">
-                <h3 class="category-title right-aligned">Academic</h3>
-                <hr class="category-divider right-aligned" />
-                <!-- populated by JS -->
-                <div class="projects-grid academic-grid"></div>
+            <div class="project-category-header right-aligned">
+                <div class="cat-line"></div>
+                <h3>Academic</h3>
             </div>
+            <!-- populated by JS -->
+            <div class="projects-grid academic-grid"></div>
  
-            <div class="collapse-container">
-                <button id="togglePastAcademic" class="collapse-button">Past Academic Projects</button>
-                <div id="past-academic-content" class="past-academic-content hidden">
-                    <h3 class="collapsed-title">Past Academic Projects</h3>
+            <div class="collapse-wrap">
+                <button id="togglePastAcademic" class="collapse-btn">
+                Past Academic Projects <span class="collapse-arrow">▼</span>
+                </button>
+            </div>
+            <div id="past-academic-content" class="collapsible-content">
+                <div class="collapsed-inner">
                     <!-- populated by JS -->
                     <div class="projects-grid past-academic-grid"></div>
                 </div>
             </div>
- 
-            <div class="project-category">
-                <h3 class="category-title">Personal</h3>
-                <hr class="category-divider" />
+
+            <div class="project-category-header" style="margin-top:40px">
+                <h3>Personal</h3>
+                <div class="cat-line"></div>
+            </div>
+            <!-- populated by JS -->
+            <div class="projects-grid personal-grid"></div>
+        </section>
+    
+        <!-- LEADERSHIP/VOLUNTEER SECTION -->
+        <section id="lead-volun" class="section-wrap">
+            <p class="eyebrow">Beyond Coding & Prototyping</p>
+            <h2 class="section-heading">Leadership & Volunteer</h2>
+            <div class="section-divider"></div>
+    
+            <div class="timeline-section-title">Leadership</div>
+            <!-- populated by JS -->
+            <div class="timeline-container leadership-timeline"></div>
+
+            <div class="collapse-wrap">
+                <button id="togglePastLeadership" class="collapse-btn">
+                Past Leadership Experiences <span class="collapse-arrow">▼</span>
+                </button>
+            </div>
+            <div id="past-leadership-content" class="collapsible-content">
+                <div class="collapsed-inner">
                 <!-- populated by JS -->
-                <div class="projects-grid personal-grid"></div>
+                <div class="timeline-container past-leadership-timeline"></div>
+                </div>
+            </div>
+
+            <div class="timeline-section-title" style="margin-top:48px">Volunteer & Mentorship</div>
+            <!-- populated by JS -->
+            <div class="timeline-container volunteer-timeline"></div>
+
+            <div class="collapse-wrap">
+                <button id="togglePastVolunteer" class="collapse-btn">
+                Past Volunteer / Mentorship <span class="collapse-arrow">▼</span>
+                </button>
+            </div>
+            <div id="past-volunteer-content" class="collapsible-content">
+                <div class="collapsed-inner">
+                <!-- populated by JS -->
+                <div class="timeline-container past-volunteer-timeline"></div>
+                </div>
             </div>
         </section>
 
-        <section id="lead-volun" class="experience-section">
- 
-            <div class="timeline-container leadership-timeline">
-                <h3 class="timeline-title">Leadership</h3>
-                <hr />
-                <!-- populated by JS -->
-            </div>
- 
-            <!-- buggy bug bug :( -->
-            <!-- <div class="collapse-container">
-                <button id="togglePastLeadership" class="collapse-button">Past Leadership Experiences</button>
-                <div id="past-leadership-content" class="past-leadership-content hidden">
-                    <h3 class="collapsed-title">Past Leadership Experiences</h3>
-                -->    <!-- populated by JS -->
-                <!--   <div class="timeline-container .past-experience-timeline">
-                        <hr />
-                    </div>
-                </div>
-            </div> -->
- 
-            <div class="collapse-container">
-                <button id="togglePastLeadership" class="collapse-button">
-                    Past Leadership Experiences
-                </button>
-                <div id="past-leadership-content" class="past-leadership-content hidden">
-                    <h3 class="collapsed-title">Past Leadership Experiences</h3>
-
-                    <div class="timeline-container .past-experience-timeline">
-                        <hr />
-
-                        <div class="timeline-entry leadership-entry">
-                            <div class="entry-date left-date">April 2022 - May 2023</div>
-                            <div class="entry-content right-content">
-                                <h4>VP Schools</h4>
-                                <p class="company">Robogals UCalgary</p>
-                                <ul>
-                                    <li>
-                                        Liaised with libraries and schools in Calgary to arrange
-                                        technical workshops and activities designed to encourage
-                                        youths into STEM
-                                    </li>
-                                    <li>
-                                        Facilitated event registration and collected feedback from
-                                        students' guardians and instructors
-                                    </li>
-                                    <li>
-                                        Attended workshops and volunteered to assist participants
-                                        in their projects
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="timeline-entry leadership-entry reversed">
-                            <div class="entry-content left-content">
-                                <h4>VP Academic</h4>
-                                <p class="company">
-                                    Electrical & Software Engineering Students' Society (ZOO)
-                                </p>
-                                <ul>
-                                    <li>
-                                        Collaborated with the Electrical and Software Engineering
-                                        Department and professors
-                                    </li>
-                                    <li>
-                                        Organized and executed various academic and professional
-                                        events, such as the Internship Panel
-                                    </li>
-                                    <li>
-                                        Gathered and analyzed feedback from students to enhance
-                                        their academic experience and performance, discussing with
-                                        departments and/or professors when required
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="entry-date right-date">April 2022 - May 2023</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-container volunteer-timeline">
-                <h3 class="timeline-title">Volunteer/Mentorship</h3>
-                <hr />
-                <!-- populated by JS -->
-            </div>
- 
-            <!-- buggy bug bug :( -->
-            <!-- <div class="collapse-container">
-                <button id="togglePastVolunteer" class="collapse-button">Past Volunteer/Mentorship Experiences</button>
-                <div id="past-volunteer-content" class="past-leadership-content hidden">
-                    <h3 class="collapsed-title">Past Volunteer/Mentorship Experiences</h3>
-                --><!-- populated by JS -->
-                <!--    <div class="timeline-container .past-experience-timeline">
-                        <hr />
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="collapse-container">
-                <button id="togglePastVolunteer" class="collapse-button">
-                    Past Volunteer/Mentorship Experiences
-                </button>
-                <div id="past-volunteer-content" class="past-leadership-content hidden">
-                    <h3 class="collapsed-title">
-                        Past Volunteer/Mentorship Experiences
-                    </h3>
-
-                    <div class="timeline-container .past-experience-timeline">
-                        <hr />
-
-                        <div class="timeline-entry volunteer-entry">
-                            <div class="entry-date left-date">
-                                January 2022 - April 2022
-                            </div>
-                            <div class="entry-content right-content">
-                                <h4>English Teaching Mentor</h4>
-                                <p class="company">Edu.Dialect</p>
-                                <ul>
-                                    <li>
-                                        Worked with my student over a series of sessions to assist
-                                        them in improving their English communication skills
-                                    </li>
-                                    <li>
-                                        Aspects include but is not limited to pronunciation,
-                                        grammatical accuracy, and written skills
-                                    </li>
-                                    <li>
-                                        Provided valuable advice and strategies for
-                                        self-improvement, and motivated to put in further effort
-                                        in learning non-native languages
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="timeline-entry volunteer-entry reversed">
-                            <div class="entry-content left-content">
-                                <h4>Orientation Leader</h4>
-                                <p class="company">University of Calgary</p>
-                                <ul>
-                                    <li>
-                                        Worked together with my team to welcome groups of incoming
-                                        students through two days of Fall Orientation
-                                    </li>
-                                    <li>
-                                        Provided knowledge and personal experiences to ensure they
-                                        have a smooth transition into university life
-                                    </li>
-                                    <li>
-                                        Responded to queries and guided students to helpful or
-                                        necessary resources
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="entry-date right-date multi-date">
-                                <span>August 2021 - September 2021</span>
-                                <span>August 2022 - September 2022</span>
-                            </div>
-                        </div>
-
-                        <div class="timeline-entry volunteer-entry">
-                            <div class="entry-date left-date">
-                                July 2021 - December 2022
-                            </div>
-                            <div class="entry-content right-content">
-                                <h4>Mentor</h4>
-                                <p class="company">
-                                    GPS Mentorship Program (Prev. ISS Mentorship Program)
-                                </p>
-                                <ul>
-                                    <li>
-                                        Supported new and current international students,
-                                        responded to their queries, and guided them to helpful
-                                        resources
-                                    </li>
-                                    <li>
-                                        Provided peer advice regarding studies at the University
-                                        of Calgary and adapting to life in Calgary
-                                    </li>
-                                    <li>
-                                        Shared relevant personal experiences and attended events
-                                        with my mentee(s) to enhance our mentor-mentee bond
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="fun-facts" class="fun-facts-section">
-            <h2>Fun Facts</h2>
-            <p class="fun-facts-intro">Outside of work & university...</p>
+        <!-- FUN FACTS SECTION -->
+        <section id="fun-facts" class="section-wrap reveal">
+            <p class="eyebrow">Outside the IDE</p>
+            <h2 class="section-heading">A Bit More About Me</h2>
+            <div class="section-divider"></div>
 
             <div class="fun-facts-grid">
                 <div class="fact-card">
-                    <div class="fact-card__icon">✈️</div>
-                    <h3>Travelling</h3>
-                    <p>
-                        <ul>Been to <span class="fact-highlight">4 continents.</span></ul>
-                        <ul>Fan of: Mountains, Coastal areas, Glaciers, Lakes</span></ul>
-                        <ul>I once stayed in 3 countries within a month: Scotland, Canada, England</ul>
-                    </p>
+                    <div class="fact-header">
+                        <div class="fact-icon">✈️</div>
+                        <h3>Travelling</h3>
+                    </div>
+                    <ul>
+                        <li>4 out of 7 continents</li>
+                        <li>Fan of mountains, glaciers, and coastal areas</li>
+                        <li>Once lived in 3 countries within a single month</li>
+                    </ul>
                 </div>
 
                 <div class="fact-card">
-                    <div class="fact-card__icon">📚</div>
-                    <h3>Reading</h3>
-                    <p>
-                        <ul>Anything from fiction & fantasy to psychological thrillers</ul>
-                        <ul>I have over 30 unread books in my room</ul>
-                    </p>
+                    <div class="fact-header">
+                        <div class="fact-icon">📚</div>
+                        <h3>Reading</h3>
+                    </div>
+                    <ul>
+                        <li>Anything, recent genre: fiction, fantasy, and psychological thrillers</li>
+                        <li>30+ unread books on the shelf (and counting)</li>
+                    </ul>
                 </div>
 
                 <div class="fact-card">
-                    <div class="fact-card__icon">🎵</div>
-                    <h3>Music</h3>
-                    <p>
-                        <ul>Listening when I'm coding, commuting, working or just unwinding</ul>
-                        <ul>I can play the guitar and keyboard (though I should practice more)</ul>
-                        <ul>Barre chords ruin me, my capo is my best friend</ul>
-                    </p>
+                    <div class="fact-header">
+                        <div class="fact-icon">🎵</div>
+                        <h3>Music</h3>
+                    </div>
+                    <ul>
+                        <li>Listener + guitar player (should practice more)</li>
+                        <li>Barre chords are my nemesis && my capo is my best friend</li>
+                    </ul>
                 </div>
 
                 <div class="fact-card">
-                <div class="fact-card__icon">🎮</div>
-                    <h3>Gaming</h3>
-                    <p>
-                        <ul>Anything open-world, RPG, or low commitment</ul>
-                        <ul>I once played R6 and Valorant on a laptop with integrated graphics and core i3</ul>
-                    </p>
+                    <div class="fact-header">
+                        <div class="fact-icon">🎮</div>
+                        <h3>Gaming</h3>
+                    </div>
+                    <ul>
+                        <li>Open-world, RPG, and anything low-commitment</li>
+                        <li>Once ran R6 & Valorant on integrated graphics with intel core i3</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2>Get In Touch</h2>
-            <p>
-                I'd love to hear from you! Feel free to reach out through any of the
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-wrap reveal">
+            <p class="eyebrow">Get In Touch</p>
+            <h2 class="section-heading">Contact</h2>
+            <div class="section-divider"></div>
+            <p class="about-bio">
+                I'd love to connect! Feel free to reach out through any of the
                 following:
             </p>
-            <div class="contact-details">
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:talukderrumaisa25@gmail.com">talukderrumaisa25@gmail.com</a>
-                </p>
-                <p>
-                    <strong>LinkedIn:</strong>
-                    <a href="https://linkedin.com/in/rumaisa-talukder"
-                        target="_blank">linkedin.com/in/rumaisa-talukder</a>
-                </p>
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/codeongaku" target="_blank">github.com/codeongaku</a>
-                </p>
+
+            <div class="contact-grid">
+                <a href="mailto:talukderrumaisa25@gmail.com" class="contact-card">
+                <span class="contact-icon">
+                    <img src="public/assets/email-icon.png" alt="Email Icon">
+                </span>               
+                <div class="contact-card-text">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">talukderrumaisa25@gmail.com</div>
+                </div>
+                </a>
+
+                <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank" class="contact-card">
+                <span class="contact-icon">
+                    <img src="public/assets/linkedin-icon.png" alt="LinkedIn Icon">
+                </span>     
+                <div class="contact-card-text">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">rumaisa-talukder</div>
+                </div>
+                </a>
+
+                <a href="https://github.com/codeongaku" target="_blank" class="contact-card">
+                <span class="contact-icon">
+                    <img src="public/assets/github-icon.png" alt="GitHub Icon">
+                </span>    
+                <div class="contact-card-text">
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">codeongaku</div>
+                </div>
+                </a>
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Rumaisa Talukder</p>
-        <div class="footer-links">
-            <a href="#about">Back to Top</a> |
-            <a href="https://github.com/codeongaku" target="_blank">GitHub</a> |
+    <footer class="site-footer">
+        <p>© 2026 Rumaisa Talukder &nbsp;·&nbsp;
+            <a href="#about">Top</a> &nbsp;·&nbsp;
+            <a href="casestudy.html">Case Studies</a> &nbsp;·&nbsp;
+            <a href="https://github.com/codeongaku" target="_blank">GitHub</a> &nbsp;·&nbsp;
             <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank">LinkedIn</a>
-            |
-            <a href="mailto:talukderrumaisa25@gmail.com">Email</a>
-        </div>
+        </p>
     </footer>
 
-    <script src="src/script.js"></script>
+  <script src="src/script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,168 @@
+{
+  "casestudies": [
+    {
+      "id": "navis",
+      "title": "NAVIS",
+      "subtitle": "ENEL 500 — Engineering Capstone · Fall 2025 – Winter 2026",
+      "tags": [
+        { "label": "Mobile App · BLE · Multidisciplinary", "highlight": false }
+      ],
+      "overview": "NAVIS is a smart navigation glasses system built for low-emission travellers who rely on phones for directions. The system delivers real-time GPS guidance through an OLED lens display attached to wearable glasses and bone-conduction audio. No hands. No screen-checking. Built with accessible components and fully open-source documented for future teams.",
+      "problem": "Non-motorized travellers (cyclists, pedestrians, mobility aid users) often rely on phones for navigation, which requires looking away from the path and can be unsafe. NAVIS offloads navigation cues to a wearable display, with the companion app serving as the configuration and control hub.",
+      "roles": {
+        "design": {
+          "title": "UX Design",
+          "points": [
+            "Designed the companion app interface in Figma",
+            "BLE pairing and status UI",
+            "Accessibility considerations for on-the-go use"
+          ]
+        },
+        "engineering": {
+          "title": "Development",
+          "points": [
+            "React Native (Expo) + TypeScript implementation",
+            "Real-time BLE connectivity with nRF52840 MCU",
+            "Agile sprints with bi-weekly reviews in Jira"
+          ]
+        }
+      },
+      "process": [
+        { "step": 1, "title": "Glanceability", "description": "App used while in motion — UI needed to communicate status at a glance." },
+        { "step": 2, "title": "BLE States", "description": "Clear feedback for connecting, connected, and disconnected hardware states." },
+        { "step": 3, "title": "Cross-team", "description": "Coordinated design decisions with hardware and firmware teams throughout." },
+        { "step": 4, "title": "Iteration", "description": "Designs updated as firmware capabilities evolved over the project timeline." }
+      ],
+      "designs": [
+        { "label": "App UI screens" },
+        { "label": "BLE pairing flow" }
+      ],
+      "tech": ["React Native", "Expo", "TypeScript", "Figma", "Jira", "BLE / nRF52840"]
+    },
+    {
+      "id": "peerhive",
+      "title": "PeerHive",
+      "subtitle": "Designathon · November 2025 · 5.5 hours",
+      "tags": [
+        { "label": "🏆 1st Place — Experienced Track", "highlight": true },
+        { "label": "UX Research · Prototyping", "highlight": false }
+      ],
+      "overview": "PeerHive is a social discovery platform designed to help students find mentors and mentees based on shared interests and skill proficiency. Built end-to-end in 5.5 hours at a Designathon, the project challenged our team to move fast without skipping the fundamentals.",
+      "problem": "Students often struggle to find the right mentorship connections — existing platforms are either too broad or require institutional gatekeeping. The prompt asked us to design a solution that made meaningful peer connections more accessible and low-friction.",
+      "research": {
+        "primary": {
+          "title": "Primary Research",
+          "points": [
+            "User surveys distributed to students",
+            "Identified pain points with existing discovery tools",
+            "Mapped motivations for seeking / offering mentorship"
+          ]
+        },
+        "secondary": {
+          "title": "Secondary Research",
+          "points": [
+            "Reviewed platforms students currently use (LinkedIn, Discord)",
+            "Analyzed reviews and common frustrations",
+            "Identified gaps in skill-based matching"
+          ]
+        }
+      },
+      "process": [
+        { "step": 1, "title": "Discover", "description": "User surveys + competitive review to define the problem space before touching Figma." },
+        { "step": 2, "title": "Define", "description": "Synthesized research into a clear problem statement and user needs." },
+        { "step": 3, "title": "Ideate", "description": "Rapid sketching and team alignment on core flows and features." },
+        { "step": 4, "title": "Prototype", "description": "High-fidelity prototype in HTML/CSS delivered within the time limit." }
+      ],
+      "designs": [
+        { "label": "Discovery screen" },
+        { "label": "Profile matching" },
+        { "label": "Mentor connect flow" }
+      ],
+      "tech": ["HTML", "CSS", "Figma", "FigJam"],
+      "outcome": {
+        "icon": "🏆",
+        "text": "Placed <strong>1st in the Experienced Track</strong>. The research-first approach — defining the problem before opening design tools — was a core reason the final prototype felt cohesive and user-grounded despite the time constraint."
+      }
+    },
+    {
+      "id": "fanfest",
+      "title": "FanFest Expo",
+      "subtitle": "CPSC 481 — Human-Computer Interaction I · Winter 2025",
+      "tags": [
+        { "label": "HCI · Accessibility · Cross-platform", "highlight": false }
+      ],
+      "overview": "FanFest Expo is a convention navigation system designed to help attendees find panels, vendors, and events across a large venue. The project was built for CPSC 481 (Human-Computer Interaction I), applying HCI principles and WCAG accessibility standards throughout the entire design and development process.",
+      "problem": "Convention-goers often feel overwhelmed navigating large, multi-hall events with dense schedules and limited wayfinding. The goal was to design an intuitive navigation tool that works across mobile and desktop, reduces cognitive load, and remains accessible to all users.",
+      "process": [
+        { "step": 1, "title": "Research", "description": "Studied existing event apps and identified usability gaps through HCI literature and heuristic evaluation." },
+        { "step": 2, "title": "Wireframes", "description": "Low and mid-fidelity wireframes for both mobile and desktop layouts." },
+        { "step": 3, "title": "Accessibility", "description": "Applied WCAG standards: contrast ratios, keyboard navigation, semantic HTML, ARIA labels." },
+        { "step": 4, "title": "Implementation", "description": "Responsive Next.js front end deployed via Vercel, matching the high-fidelity Figma prototypes." }
+      ],
+      "designs": [
+        { "label": "Mobile prototype" },
+        { "label": "Desktop prototype" }
+      ],
+      "tech": ["Next.js", "CSS", "Figma", "Vercel", "Node.js"],
+      "keyDecisions": [
+        {
+          "title": "Mobile-First Layout",
+          "points": [
+            "Convention attendees are on the go",
+            "Thumb-friendly navigation zones",
+            "Progressive enhancement for desktop"
+          ]
+        },
+        {
+          "title": "Accessibility First",
+          "points": [
+            "WCAG AA contrast compliance throughout",
+            "Semantic HTML for screen reader support",
+            "Keyboard-navigable interface"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cartify",
+      "title": "Cartify",
+      "subtitle": "SENG 513 — Web-Based Systems · Fall 2025",
+      "tags": [
+        { "label": "Full-Stack · Product Design · Team Lead", "highlight": false }
+      ],
+      "overview": "Cartify is a full-stack marketplace platform that combines product buying and renting into a single, cohesive experience. As team lead, I owned both the product design and GitLab collaboration, designing high-fidelity prototypes for mobile and desktop before any code was written.",
+      "problem": "Users who want to buy or rent products are forced to use separate platforms, creating friction and fragmenting the experience. Cartify aimed to unify both models under one interface without overwhelming the user with complexity.",
+      "roles": {
+        "design": {
+          "title": "Design",
+          "points": [
+            "Led all UI/UX design in Figma",
+            "Mobile and desktop high-fidelity prototypes",
+            "Design system and component decisions",
+            "User flows for buy, rent, and listing flows"
+          ]
+        },
+        "engineering": {
+          "title": "Engineering",
+          "points": [
+            "Project lead — managed GitLab and sprints",
+            "Contributed to React front-end implementation",
+            "Coordinated back-end integration (Node.js + MySQL)"
+          ]
+        }
+      },
+      "process": [
+        { "step": 1, "title": "Define", "description": "Mapped out core user journeys: browsing, buying, renting, and listing." },
+        { "step": 2, "title": "Prototype", "description": "High-fidelity Figma prototypes for mobile and desktop before development began." },
+        { "step": 3, "title": "Build", "description": "Full-stack implementation in React, Node.js, and MySQL with Docker." },
+        { "step": 4, "title": "Iterate", "description": "Adjusted designs based on what surfaced during development and peer review." }
+      ],
+      "designs": [
+        { "label": "Mobile prototype" },
+        { "label": "Desktop prototype" },
+        { "label": "Component overview" }
+      ],
+      "tech": ["React", "Node.js", "MySQL", "Docker", "Figma", "GitLab"]
+    }
+  ]
+}

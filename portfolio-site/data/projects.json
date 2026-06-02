@@ -3,14 +3,14 @@
     {
       "title": "DCS Alarm Application",
       "source": "Kirby/CNRL",
-      "summary": "Brief overview",
+      "summary": "Automated multi-criteria data input and filtering, along with generation of pre-populated Excel/Word reports to reduce manual process time",
       "tech": "C# | SQL Server | Microsoft Excel | Microsoft Word | Visual Basic",
       "links": {}
     },
     {
       "title": "Network Asset Management",
       "source": "Kirby/CNRL",
-      "summary": "Brief overview",
+      "summary": "System to store and manage data for industrial assets (e.g., switches, VLANs, and devices) and their interconnections, refining asset tracking and assignment processes",
       "tech": "C# | SQL Server | Microsoft Excel | Microsoft Word | Visual Basic",
       "links": {}
     }
@@ -21,43 +21,58 @@
       "source": "Capstone Project",
       "summary": "Developing smart navigation glasses to improve safety & accessibility for non-motorized travellers and promote sustainable mobility. Involves a companion app built using React Native (Expo) & TypeScript with real-time navigation support",
       "tech": "React Native | Expo | TypeScript",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html#navis"
+      }
     },
     {
       "title": "Cartify",
       "source": "SENG 513 / Web Based Systems",
       "summary": "Designed and implemented an online marketplace platform that combines buying and renting products into one, reducing the need to juggle between individual buying or renting platforms.",
       "tech": "HTML/CSS | React | SQL Server | Next.js | Node.js | Docker | Figma",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "JS Custom Query",
       "source": "SENG 513 / Web Based Systems",
       "summary": "A web application (custom quiz) using JavaScript (ES6+) that fetches data from Open Trivia DB",
       "tech": "JavaScript | HTML/CSS",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku/Custom-Quiz",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "Multi-Model Recognition System",
       "source": "ENCM 509 / Fundamentals of Biometric Systems Design",
       "summary": "Implemented a multi-modal recognition/authentication system that verifies users using facial recognition and speaker recognition.",
       "tech": "Jupyter Notebook | Python | OpenCV | NumPy | Pandas | Matplotlib",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku/Multi-Modal-Recognition-System",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "ML Customer Churn Prediction",
       "source": "ENSF 544 / Data Science",
       "summary": "A machine learning-based churn prediction system to identify customers likely to leave, enabling proactive retention strategies.",
       "tech": "Jupyter Notebook | Python | NumPy | Pandas | Scikit-learn | Matplotlib | Seaborn",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku/ML-Customer-Churn-Prediction",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "FanFest Expo",
       "source": "CPSC 481 / Human Computer Interface I",
       "summary": "Designed and developed a convention navigation system, creating high-fidelity Figma prototypes and implementing a responsive front end with Next.js and CSS while collaborating via GitHub.",
-      "tech": "Next.js | Figma | Vercel | NodeJS",
+      "tech": "Next.js | Figma | Vercel | HTML/CSS",
       "links": {
-        "github": "https://github.com/codeongaku/YOUR-REPO",
+        "github": "https://github.com/codeongaku/FanFest-Expo",
         "casestudy": "casestudy.html#fanfest"
       }
     }
@@ -68,28 +83,30 @@
       "source": "CPSC 441 / Computer Networks",
       "summary": "Developed a content-filtering HTTP proxy server in C++ on WSL for intercepting and modifying web traffic in real-time, implementing regex-based text replacement and image manipulation",
       "tech": "C++ | WSL",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku/Web-Proxy",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "Media Shelf",
       "source": "CPSC 471",
       "summary": "Brief overview",
       "tech": "C# | SQL Server",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "NewsFlash",
       "source": "ENSF 401",
       "summary": "Brief overview",
       "tech": "C# | SQL Server",
-      "links": {}
-    },
-    {
-      "title": "Theatre",
-      "source": "ENSF 480",
-      "summary": "Brief overview",
-      "tech": "C# | SQL Server",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
     }
   ],
   "personal": [
@@ -98,14 +115,30 @@
       "source": "",
       "summary": "Personal Website",
       "tech": "HTML/CSS | JavaScript | GitHub",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
     },
     {
       "title": "DramaTrack",
       "source": "Inspired by Internship",
-      "summary": "A simple media-progress tracking system built using Windows Forms App (.NET Framework)",
+      "summary": "A media-progress tracking system built using Windows Forms App (.NET Framework)",
       "tech": "C# | SQLite | Microsoft Visual Studio | .NET Framework",
-      "links": {}
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
+    },
+    {
+      "title": "PeerHive",
+      "source": "Designathon 2025",
+      "summary": "A social discovery platform to link users with similar interests, allowing mentors and mentees to find each other based on skill proficiency",
+      "tech": "Figma | FigJam | HTML/CSS",
+      "links": {
+        "github": "https://github.com/codeongaku",
+        "casestudy": "casestudy.html"
+      }
     }
   ]
 }

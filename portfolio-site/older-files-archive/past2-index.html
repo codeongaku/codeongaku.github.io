@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumaisa Talukder — Software Engineer & UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Rumaisa Talukder — Software Engineering student at UCalgary with experience in frontend development, full-stack systems, and UI/UX design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/themes.css" />
+    <link rel="stylesheet" href="public/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="#about" class="brand">RT<span>.</span></a>
+
+        <nav class="main-nav">
+            <a href="#about">About</a>
+            <a href="#current">Current</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#lead-volun">Leadership</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="theme-switcher" aria-label="Switch theme">
+                <button class="theme-btn" data-theme="obsidian" title="Obsidian"></button>
+                <button class="theme-btn" data-theme="canvas"   title="Canvas"></button>
+                <button class="theme-btn" data-theme="slate"    title="Slate"></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-hero">
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="summary-line">Software Engineering student</p>
+                    <p class="summary-line">
+                        Passion for problem-solving and user insight integration
+                    </p>
+                    <p class="summary-line">
+                        Experience and knowledge in Development and User Design (UI/UX)
+                    </p>
+
+                    <p class="education-line">
+                        Education: BSc in Software Engineering @ University of Calgary
+                    </p>
+
+                    <div class="about-links">
+                        <a href="path/to/resume.pdf" target="_blank">My Resume</a>,
+                        <a href="https://github.com/codeongaku" target="_blank">My GitHub</a>,
+                        <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank">My LinkedIn</a>,
+                        <a href="mailto:talukderrumaisa25@gmail.com">Email Me</a>
+                    </div>
+                </div>
+
+                <div class="image-placeholder"></div>
+            </div>
+        </section>
+
+        <section id="current" class="current-section">
+            <h2>Current:</h2>
+            <div class="current-grid">
+                <div class="current-item roles">
+                    <h3>Roles:</h3>
+                    <ul>
+                        <li>
+                            President @ Electrical & Software Engineering Students Society
+                        </li>
+                        <li>VP Design @ Tech Start UCalgary</li>
+                        <li>
+                            UI/UX Design & Front-End Developer @ WealthPath, Enactus
+                            UCalgary
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="current-item projects-summary">
+                    <h3>Projects:</h3>
+                    <ul>
+                        <li>WealthPath</li>
+                        <li>Cartify</li>
+                        <li>NAVIS - Capstone</li>
+                    </ul>
+                </div>
+
+                <div class="current-item skills-summary">
+                    <h3>Skills:</h3>
+                    <ul>
+                        <li>Figma & Figjam</li>
+                        <li>JS, React Native, Node.js</li>
+                        <li>HTML/CSS, TypeScript</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Skills:</h2>
+            <div class="skills-grid">
+                <!-- Java & VSCode logos not on simpleicons -->
+                <div class="skill-category languages">
+                    <span class="category-label">Languages</span>
+                    <div class="skill-pills"></div>  <!-- populated by JS -->
+                </div>
+                <div class="skill-category frameworks">
+                    <span class="category-label">Frameworks & Libraries</span>
+                    <div class="skill-pills"></div>  <!-- populated by JS -->
+                </div>
+                <div class="skill-category tools">
+                    <span class="category-label">Tools & Design</span>
+                    <div class="skill-pills"></div>  <!-- populated by JS -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience" class="experience-section">
+            <h2>Experience:</h2>
+
+            <!-- Current professional entries — populated by JS -->
+            <div class="timeline-container professional-timeline"></div>
+            <div class="collapse-container">
+                <button id="togglePastEmployment" class="collapse-button">Past Employment Experiences</button>
+                <div id="past-employment-content" class="past-employment-content hidden">
+                    <h3 class="collapsed-title">Past Employment Experiences</h3>
+
+                    <!-- Past professional entries — populated by JS -->
+                    <div class="timeline-container past-professional-timeline">
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>Projects:</h2>
+            <div class="project-category">
+                <h3 class="category-title">Internship</h3>
+                <hr class="category-divider" />
+                <!-- populated by JS -->
+                <div class="projects-grid internship-grid"></div>
+            </div>
+ 
+            <div class="project-category academic-category">
+                <h3 class="category-title right-aligned">Academic</h3>
+                <hr class="category-divider right-aligned" />
+                <!-- populated by JS -->
+                <div class="projects-grid academic-grid"></div>
+            </div>
+ 
+            <div class="collapse-container">
+                <button id="togglePastAcademic" class="collapse-button">Past Academic Projects</button>
+                <div id="past-academic-content" class="past-academic-content hidden">
+                    <h3 class="collapsed-title">Past Academic Projects</h3>
+                    <!-- populated by JS -->
+                    <div class="projects-grid past-academic-grid"></div>
+                </div>
+            </div>
+ 
+            <div class="project-category">
+                <h3 class="category-title">Personal</h3>
+                <hr class="category-divider" />
+                <!-- populated by JS -->
+                <div class="projects-grid personal-grid"></div>
+            </div>
+        </section>
+
+        <section id="lead-volun" class="experience-section">
+ 
+            <div class="timeline-container leadership-timeline">
+                <h3 class="timeline-title">Leadership</h3>
+                <hr />
+                <!-- populated by JS -->
+            </div>
+ 
+            <!-- buggy bug bug :( -->
+            <!-- <div class="collapse-container">
+                <button id="togglePastLeadership" class="collapse-button">Past Leadership Experiences</button>
+                <div id="past-leadership-content" class="past-leadership-content hidden">
+                    <h3 class="collapsed-title">Past Leadership Experiences</h3>
+                -->    <!-- populated by JS -->
+                <!--   <div class="timeline-container .past-experience-timeline">
+                        <hr />
+                    </div>
+                </div>
+            </div> -->
+ 
+            <div class="collapse-container">
+                <button id="togglePastLeadership" class="collapse-button">
+                    Past Leadership Experiences
+                </button>
+                <div id="past-leadership-content" class="past-leadership-content hidden">
+                    <h3 class="collapsed-title">Past Leadership Experiences</h3>
+
+                    <div class="timeline-container .past-experience-timeline">
+                        <hr />
+
+                        <div class="timeline-entry leadership-entry">
+                            <div class="entry-date left-date">April 2022 - May 2023</div>
+                            <div class="entry-content right-content">
+                                <h4>VP Schools</h4>
+                                <p class="company">Robogals UCalgary</p>
+                                <ul>
+                                    <li>
+                                        Liaised with libraries and schools in Calgary to arrange
+                                        technical workshops and activities designed to encourage
+                                        youths into STEM
+                                    </li>
+                                    <li>
+                                        Facilitated event registration and collected feedback from
+                                        students' guardians and instructors
+                                    </li>
+                                    <li>
+                                        Attended workshops and volunteered to assist participants
+                                        in their projects
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-entry leadership-entry reversed">
+                            <div class="entry-content left-content">
+                                <h4>VP Academic</h4>
+                                <p class="company">
+                                    Electrical & Software Engineering Students' Society (ZOO)
+                                </p>
+                                <ul>
+                                    <li>
+                                        Collaborated with the Electrical and Software Engineering
+                                        Department and professors
+                                    </li>
+                                    <li>
+                                        Organized and executed various academic and professional
+                                        events, such as the Internship Panel
+                                    </li>
+                                    <li>
+                                        Gathered and analyzed feedback from students to enhance
+                                        their academic experience and performance, discussing with
+                                        departments and/or professors when required
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="entry-date right-date">April 2022 - May 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-container volunteer-timeline">
+                <h3 class="timeline-title">Volunteer/Mentorship</h3>
+                <hr />
+                <!-- populated by JS -->
+            </div>
+ 
+            <!-- buggy bug bug :( -->
+            <!-- <div class="collapse-container">
+                <button id="togglePastVolunteer" class="collapse-button">Past Volunteer/Mentorship Experiences</button>
+                <div id="past-volunteer-content" class="past-leadership-content hidden">
+                    <h3 class="collapsed-title">Past Volunteer/Mentorship Experiences</h3>
+                --><!-- populated by JS -->
+                <!--    <div class="timeline-container .past-experience-timeline">
+                        <hr />
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="collapse-container">
+                <button id="togglePastVolunteer" class="collapse-button">
+                    Past Volunteer/Mentorship Experiences
+                </button>
+                <div id="past-volunteer-content" class="past-leadership-content hidden">
+                    <h3 class="collapsed-title">
+                        Past Volunteer/Mentorship Experiences
+                    </h3>
+
+                    <div class="timeline-container .past-experience-timeline">
+                        <hr />
+
+                        <div class="timeline-entry volunteer-entry">
+                            <div class="entry-date left-date">
+                                January 2022 - April 2022
+                            </div>
+                            <div class="entry-content right-content">
+                                <h4>English Teaching Mentor</h4>
+                                <p class="company">Edu.Dialect</p>
+                                <ul>
+                                    <li>
+                                        Worked with my student over a series of sessions to assist
+                                        them in improving their English communication skills
+                                    </li>
+                                    <li>
+                                        Aspects include but is not limited to pronunciation,
+                                        grammatical accuracy, and written skills
+                                    </li>
+                                    <li>
+                                        Provided valuable advice and strategies for
+                                        self-improvement, and motivated to put in further effort
+                                        in learning non-native languages
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-entry volunteer-entry reversed">
+                            <div class="entry-content left-content">
+                                <h4>Orientation Leader</h4>
+                                <p class="company">University of Calgary</p>
+                                <ul>
+                                    <li>
+                                        Worked together with my team to welcome groups of incoming
+                                        students through two days of Fall Orientation
+                                    </li>
+                                    <li>
+                                        Provided knowledge and personal experiences to ensure they
+                                        have a smooth transition into university life
+                                    </li>
+                                    <li>
+                                        Responded to queries and guided students to helpful or
+                                        necessary resources
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="entry-date right-date multi-date">
+                                <span>August 2021 - September 2021</span>
+                                <span>August 2022 - September 2022</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-entry volunteer-entry">
+                            <div class="entry-date left-date">
+                                July 2021 - December 2022
+                            </div>
+                            <div class="entry-content right-content">
+                                <h4>Mentor</h4>
+                                <p class="company">
+                                    GPS Mentorship Program (Prev. ISS Mentorship Program)
+                                </p>
+                                <ul>
+                                    <li>
+                                        Supported new and current international students,
+                                        responded to their queries, and guided them to helpful
+                                        resources
+                                    </li>
+                                    <li>
+                                        Provided peer advice regarding studies at the University
+                                        of Calgary and adapting to life in Calgary
+                                    </li>
+                                    <li>
+                                        Shared relevant personal experiences and attended events
+                                        with my mentee(s) to enhance our mentor-mentee bond
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="fun-facts" class="fun-facts-section">
+            <h2>Fun Facts</h2>
+            <p class="fun-facts-intro">Outside of work & university...</p>
+
+            <div class="fun-facts-grid">
+                <div class="fact-card">
+                    <div class="fact-card__icon">✈️</div>
+                    <h3>Travelling</h3>
+                    <p>
+                        <ul>Been to <span class="fact-highlight">4 continents.</span></ul>
+                        <ul>Fan of: Mountains, Coastal areas, Glaciers, Lakes</span></ul>
+                        <ul>I once stayed in 3 countries within a month</ul>
+                    </p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-card__icon">📚</div>
+                    <h3>Reading</h3>
+                    <p>
+                        <ul>Anything from fiction & fantasy to psychological thrillers</ul>
+                        <ul>I have 30+ unread books in my room</ul>
+                    </p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-card__icon">🎵</div>
+                    <h3>Music</h3>
+                    <p>
+                        <ul>I can play the guitar and keyboard (though I should practice more)</ul>
+                        <ul>Barre chords ruin me, my capo is my best friend</ul>
+                    </p>
+                </div>
+
+                <div class="fact-card">
+                <div class="fact-card__icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>
+                        <ul>Anything open-world, RPG, or low commitment</ul>
+                        <ul>I played R6 & Valorant on a laptop with integrated graphics + core i3</ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>
+                I'd love to hear from you! Feel free to reach out through any of the
+                following:
+            </p>
+            <div class="contact-details">
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:talukderrumaisa25@gmail.com">talukderrumaisa25@gmail.com</a>
+                </p>
+                <p>
+                    <strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/rumaisa-talukder"
+                        target="_blank">linkedin.com/in/rumaisa-talukder</a>
+                </p>
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/codeongaku" target="_blank">github.com/codeongaku</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rumaisa Talukder</p>
+        <div class="footer-links">
+            <a href="#about">Back to Top</a> |
+            <a href="https://github.com/codeongaku" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/rumaisa-talukder" target="_blank">LinkedIn</a>
+            |
+            <a href="mailto:talukderrumaisa25@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
