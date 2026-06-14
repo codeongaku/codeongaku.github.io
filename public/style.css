@@ -473,9 +473,9 @@ main {
 }
 
 .entry-content h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-title);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
   margin-bottom: 3px;
   letter-spacing: 1px;
@@ -484,7 +484,7 @@ main {
 .entry-content .company {
   font-size: 12.5px;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 10px;
   font-style: normal;
   letter-spacing: 1px;
@@ -629,7 +629,7 @@ main {
   box-shadow: var(--shadow);
 }
 
-.project-image-placeholder {
+/* .project-image-placeholder {
   width: 100%;
   height: 110px;
   background: var(--surface-2);
@@ -641,17 +641,19 @@ main {
   color: var(--text-dim);
   font-size: 12px;
   margin-bottom: 4px;
-}
+} */
 
 .project-card h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-title);
+  letter-spacing: 1px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
 }
 
 .project-source {
   font-size: 12px;
+  font-weight: 800;
   color: var(--text-dim);
   font-style: italic;
 }

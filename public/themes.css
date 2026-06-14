@@ -1,7 +1,7 @@
-/* ============================================================
+/*
    DESIGN TOKENS — shared by index.html & casestudy.html
    Theme switching: body[data-theme="obsidian|canvas|slate"]
-   ============================================================ */
+ */
 
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap');
@@ -24,7 +24,7 @@
 
   /* Text */
   --text:         #eef0f8;
-  --text-muted:   #8a8fa8;
+  --text-muted:   #abb1ce;
   --text-dim:     #4a4f68;
 
   /* Pill/tag */
@@ -37,15 +37,15 @@
   --shadow-hover: 0 8px 32px rgba(0,0,0,0.65);
 
   /* Fonts */
-  --font-display: 'Times New Roman', sans-serif;
+  --font-display: 'Times New Roman', serif;
   --font-body:    'Manrope', sans-serif;
-  --font-mono:    'DM Mono', 'Fira Mono', monospace;
+  --font-title:   'Arial', sans-serif;
 }
 
 /* CANVAS theme */
 [data-theme="canvas"] {
   --bg:           #fff1d3;
-  --surface:      #ffe2b0;
+  --surface:      #fee7be;
   --surface-2:    #ffdab0;
   --surface-3:    #d8d1c5;
   --border:       #c8c0b0;
@@ -56,7 +56,7 @@
   --accent-mid:   rgba(192,87,42,0.22);
   --accent-warm:  #5a8a6e;
 
-  --text:         #2f271a; 
+  --text:         #513d20; 
   --text-muted:   #584c3c;
   --text-dim:     #585045;
 
@@ -69,8 +69,8 @@
 /* SLATE theme */
 [data-theme="slate"] {
   --bg:           #030420;
-  --surface:      #090B38;
-  --surface-2:    #252d3a;
+  --surface:      rgb(17, 19, 59);
+  --surface-2:    #0e1b40;
   --surface-3:    #2d3848;
   --border:       #374151;
   --border-soft:  rgba(255,255,255,0.06);
@@ -81,7 +81,7 @@
   --accent-warm:  #60a5fa;
 
   --text:         #eef6fe;
-  --text-muted:   #e4e9ff;
+  --text-muted:   #abb4dc;
   --text-dim:     #7476b7;
 
   --tag-bg:       #2b4878;
@@ -138,7 +138,7 @@ body {
 
 .theme-btn[data-theme="obsidian"] { background: linear-gradient(135deg, #09090f 50%, #4fd1c5 50%); }
 .theme-btn[data-theme="canvas"]   { background: linear-gradient(135deg, #f5f0e8 50%, #c0572a 50%); }
-.theme-btn[data-theme="slate"]    { background: linear-gradient(135deg, #161b22 50%, #a78bfa 50%); }
+.theme-btn[data-theme="slate"]    { background: linear-gradient(135deg, #161b22 50%, #43259c 50%); }
 
 /* SHARED HEADER */
 .site-header {

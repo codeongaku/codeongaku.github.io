@@ -19,8 +19,8 @@
     {
       "title": "Navis - Smart Navigation Glasses",
       "source": "Capstone Project",
-      "summary": "Developing smart navigation glasses to improve safety & accessibility for non-motorized travellers and promote sustainable mobility. Involves a companion app built using React Native (Expo) & TypeScript with real-time navigation support",
-      "tech": "React Native | Expo | TypeScript",
+      "summary": "Smart navigation glasses to improve safety & accessibility for non-motorized travellers and promote sustainable mobility. Involves a companion app built using React Native (Expo) & TypeScript with real-time navigation support",
+      "tech": "React Native | Expo | TypeScript | Hardware",
       "links": {
         "github": "https://github.com/codeongaku",
         "casestudy": "casestudy.html#navis"
@@ -29,7 +29,7 @@
     {
       "title": "Cartify",
       "source": "SENG 513 / Web Based Systems",
-      "summary": "Designed and implemented an online marketplace platform that combines buying and renting products into one, reducing the need to juggle between individual buying or renting platforms.",
+      "summary": "An online marketplace platform that combines buying and renting products into one, reducing the need to juggle between individual buying or renting platforms.",
       "tech": "HTML/CSS | React | SQL Server | Next.js | Node.js | Docker | Figma",
       "links": {
         "github": "https://github.com/codeongaku",
@@ -48,8 +48,8 @@
     },
     {
       "title": "Multi-Model Recognition System",
-      "source": "ENCM 509 / Fundamentals of Biometric Systems Design",
-      "summary": "Implemented a multi-modal recognition/authentication system that verifies users using facial recognition and speaker recognition.",
+      "source": "ENCM 509 / Fundamentals of Biometric Systems Design - Solo Project",
+      "summary": "A multi-modal recognition/authentication system that verifies users using facial recognition and speaker recognition.",
       "tech": "Jupyter Notebook | Python | OpenCV | NumPy | Pandas | Matplotlib",
       "links": {
         "github": "https://github.com/codeongaku/Multi-Modal-Recognition-System",
@@ -69,7 +69,7 @@
     {
       "title": "FanFest Expo",
       "source": "CPSC 481 / Human Computer Interface I",
-      "summary": "Designed and developed a convention navigation system, creating high-fidelity Figma prototypes and implementing a responsive front end with Next.js and CSS while collaborating via GitHub.",
+      "summary": "A convention navigation system, including high-fidelity Figma prototypes and a responsive frontend implemented with Next.js and CSS while collaborating via GitHub.",
       "tech": "Next.js | Figma | Vercel | HTML/CSS",
       "links": {
         "github": "https://github.com/codeongaku/FanFest-Expo",
@@ -81,7 +81,7 @@
     {
       "title": "Web Proxy",
       "source": "CPSC 441 / Computer Networks",
-      "summary": "Developed a content-filtering HTTP proxy server in C++ on WSL for intercepting and modifying web traffic in real-time, implementing regex-based text replacement and image manipulation",
+      "summary": "A content-filtering HTTP proxy server in C++ on WSL for intercepting and modifying web traffic in real-time, implementing regex-based text replacement and image manipulation",
       "tech": "C++ | WSL",
       "links": {
         "github": "https://github.com/codeongaku/Web-Proxy",
@@ -90,9 +90,9 @@
     },
     {
       "title": "Media Shelf",
-      "source": "CPSC 471",
-      "summary": "Brief overview",
-      "tech": "C# | SQL Server",
+      "source": "CPSC 471 / Database Management",
+      "summary": "An entertainment tracking system built using PHP and CSS with MySQL integration, enabling uesrs to dynamically catalog media consmption and connect with community",
+      "tech": "PHP | CSS | MySQL",
       "links": {
         "github": "https://github.com/codeongaku",
         "casestudy": "casestudy.html"
@@ -101,8 +101,8 @@
     {
       "title": "NewsFlash",
       "source": "ENSF 401",
-      "summary": "Brief overview",
-      "tech": "C# | SQL Server",
+      "summary": "Full-stack user-centric social media platform built using MERN (MongoDB, Express, React, Node.js) stack and Firebase for user authentication and data storage",
+      "tech": "MongoDB | Express | React | Node.js",
       "links": {
         "github": "https://github.com/codeongaku",
         "casestudy": "casestudy.html"
@@ -113,7 +113,7 @@
     {
       "title": "Portfolio",
       "source": "",
-      "summary": "Personal Website",
+      "summary": "Personal website with case studies",
       "tech": "HTML/CSS | JavaScript | GitHub",
       "links": {
         "github": "https://github.com/codeongaku",

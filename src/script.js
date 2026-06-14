@@ -121,6 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Section builders - Following prev. format in past-index.html
+// Possible addition: <div class="project-image-placeholder">Image</div>
 function buildProjectCard(p) {
     const source  = p.source ? `<p class="project-source">${p.source}</p>` : '';
     const actions = (p.links.github || p.links.casestudy)
@@ -131,7 +132,6 @@ function buildProjectCard(p) {
         : '';
     return `
         <div class="project-card">
-            <div class="project-image-placeholder">Image Placeholder</div>
             <h4>${p.title}</h4>
             ${source}
             <p class="project-summary">${p.summary}</p>
